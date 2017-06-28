@@ -1,0 +1,212 @@
+<templateSet group="NativeBase">
+  <template name="nb-anatomy" value="&lt;Container&gt;&#10;    &lt;Header&gt;&#10;        &lt;Left&gt;&#10;            &lt;Button transparent&gt;&#10;                &lt;Icon name='menu'/&gt;&#10;            &lt;/Button&gt;&#10;        &lt;/Left&gt;&#10;        &lt;Body&gt;&#10;        &lt;Title&gt;Header&lt;/Title&gt;&#10;        &lt;/Body&gt;&#10;        &lt;Right /&gt;&#10;    &lt;/Header&gt;&#10;    &lt;Content&gt;&#10;        // Your main content goes here&#10;    &lt;/Content&gt;&#10;    &lt;Footer&gt;&#10;        &lt;FooterTab&gt;&#10;            &lt;Button full&gt;&#10;                &lt;Text&gt;Footer&lt;/Text&gt;&#10;            &lt;/Button&gt;&#10;        &lt;/FooterTab&gt;&#10;    &lt;/Footer&gt;&#10;&lt;/Container&gt;" description="Anatomy" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-actionsheet" value="import React, { Component } from 'react';&#10;import { Container, Header, Left, Button, Body, Title, Icon, Right, Content, ActionSheet, Text } from 'native-base';&#10;var BUTTONS = [&#10;  'Option 0',&#10;  'Option 1',&#10;  'Option 2',&#10;  'Delete',&#10;  'Cancel',&#10;];&#10;var DESTRUCTIVE_INDEX = 3;&#10;var CANCEL_INDEX = 4;&#10;export default class ActionSheet extends Component {&#10;  constructor(props) {&#10;    super(props);&#10;    this.state = {}&#10;  }&#10;  render() {&#10;    return (&#10;      &lt;Container&gt;&#10;        &lt;Header&gt;&#10;          &lt;Left&gt;&#10;            &lt;Button transparent&gt;&#10;              &lt;Icon name=&quot;heart&quot; size={20} color='red' /&gt;&#10;            &lt;/Button&gt;&#10;          &lt;/Left&gt;&#10;          &lt;Body&gt;&#10;            &lt;Title&gt;Hello&lt;/Title&gt;&#10;          &lt;/Body&gt;&#10;          &lt;Right /&gt;&#10;        &lt;/Header&gt;&#10;        &lt;Content padder&gt;&#10;          &lt;Button onPress={()=&gt; ActionSheet.show(&#10;          {&#10;            options: BUTTONS,&#10;            cancelButtonIndex: CANCEL_INDEX,&#10;            destructiveButtonIndex: DESTRUCTIVE_INDEX,&#10;            title: 'Testing ActionSheet'&#10;          },&#10;          (buttonIndex) =&gt; {&#10;            this.setState({ clicked: BUTTONS[buttonIndex] });&#10;          }&#10;          )}&gt;&#10;            &lt;Text&gt;Actionsheet&lt;/Text&gt;&#10;          &lt;/Button&gt;&#10;        &lt;/Content&gt;&#10;      &lt;/Container&gt;&#10;    );&#10;  }&#10;}" description="ActionSheet" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-badge" value="&lt;Badge $TYPE$&gt; // primary,success,info,warning,danger&#10;  &lt;Text&gt;$END$&lt;/Text&gt;&#10;&lt;/Badge&gt;" description="Badge" toReformat="false" toShortenFQNames="true">
+    <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-button" value="&lt;Button&gt;&#10;   &lt;Text&gt;$END$&lt;/Text&gt;&#10;&lt;/Button&gt;&#10;// transparent rounded outline transparent block full iconLeft small/large disabled" description="Button" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-button-transparent" value="&lt;Button transparent&gt;&#10;    &lt;Text&gt;$END$&lt;/Text&gt;&#10;&lt;/Button&gt;" description="Transparent button" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-card" value="&lt;Card&gt;&#10;    &lt;CardItem header&gt;&#10;        &lt;Text&gt;$HEADER$&lt;/Text&gt;&#10;    &lt;/CardItem&gt;&#10;    &lt;CardItem&gt;&#10;        &lt;Body&gt;&#10;            &lt;Text&gt;&#10;                //your text is here&#10;                $BODY$&#10;            &lt;/Text&gt;&#10;        &lt;/Body&gt;&#10;    &lt;/CardItem&gt;&#10;    &lt;CardItem footer&gt;&#10;        &lt;Text&gt;$END$&lt;/Text&gt;&#10;    &lt;/CardItem&gt;&#10;&lt;/Card&gt;" description="Card" toReformat="false" toShortenFQNames="true">
+    <variable name="HEADER" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="BODY" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-card-list" value="&lt;Card&gt;&#10;    &lt;CardItem&gt;&#10;      &lt;Icon active name=&quot;logo-googleplus&quot; /&gt;&#10;      &lt;Text&gt;Google Plus&lt;/Text&gt;&#10;      &lt;Right&gt;&#10;        &lt;Icon name=&quot;arrow-forward&quot; /&gt;&#10;      &lt;/Right&gt;&#10;    &lt;/CardItem&gt;&#10;&lt;/Card&gt;" description="CardList" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-card-image" value="&lt;Card&gt;&#10;            &lt;CardItem&gt;&#10;              &lt;Left&gt;&#10;                &lt;Thumbnail source={{uri: 'Image URL'}} /&gt;&#10;                &lt;Body&gt;&#10;                  &lt;Text&gt;NativeBase&lt;/Text&gt;&#10;                  &lt;Text note&gt;GeekyAnts&lt;/Text&gt;&#10;                &lt;/Body&gt;&#10;              &lt;/Left&gt;&#10;            &lt;/CardItem&gt;&#10;            &lt;CardItem cardBody&gt;&#10;              &lt;Image source={{uri: 'Image URL'}} style={{height: 200, width: null, flex: 1}}/&gt;&#10;            &lt;/CardItem&gt;&#10;            &lt;CardItem&gt;&#10;              &lt;Button transparent&gt;&#10;                &lt;Icon active name=&quot;thumbs-up&quot; /&gt;&#10;                &lt;Text&gt;12 Likes&lt;/Text&gt;&#10;              &lt;/Button&gt;&#10;              &lt;Button transparent&gt;&#10;                &lt;Icon active name=&quot;chatbubbles&quot; /&gt;&#10;                &lt;Text&gt;4 Comments&lt;/Text&gt;&#10;              &lt;/Button&gt;&#10;              &lt;Text&gt;11h ago&lt;/Text&gt;&#10;            &lt;/CardItem&gt;&#10;          &lt;/Card&gt;" description="CardImage" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-card-showcase" value="          &lt;Card style={{flex: 0}}&gt;&#10;            &lt;CardItem&gt;&#10;              &lt;Left&gt;&#10;                &lt;Thumbnail source={{uri: 'Image URL'}} /&gt;&#10;                &lt;Body&gt;&#10;                  &lt;Text&gt;NativeBase&lt;/Text&gt;&#10;                  &lt;Text note&gt;April 15, 2016&lt;/Text&gt;&#10;                &lt;/Body&gt;&#10;              &lt;/Left&gt;&#10;            &lt;/CardItem&gt;&#10;            &lt;CardItem&gt;&#10;              &lt;Body&gt;&#10;                &lt;Image source={{uri: 'Image URL'}} style={{height: 200, width: 200, flex: 1}}/&gt;&#10;                &lt;Text&gt;&#10;                  //Your text here&#10;                &lt;/Text&gt;&#10;              &lt;/Body&gt;&#10;            &lt;/CardItem&gt;&#10;            &lt;CardItem&gt;&#10;              &lt;Left&gt;&#10;                &lt;Button transparent textStyle={{color: '#87838B'}}&gt;&#10;                  &lt;Icon name=&quot;logo-github&quot; /&gt;&#10;                  &lt;Text&gt;1,926 stars&lt;/Text&gt;&#10;                &lt;/Button&gt;&#10;              &lt;/Left&gt;&#10;            &lt;/CardItem&gt;&#10;          &lt;/Card&gt;" description="CardShowcase" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-checkbox" value=" &lt;CheckBox checked={$CHECKED$} color='$COLOR$' onPress={$END$}  /&gt;" description="Checkbox" toReformat="true" toShortenFQNames="true">
+    <variable name="CHECKED" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="COLOR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-deck-swiper" value="const cards = [&#10;  {&#10;    text: 'Card One',&#10;    name: 'One',&#10;    image: require('./img/swiper-1.png'),&#10;  },&#10;  .  .  .&#10;];&#10;export default class DeckSwiperExample extends Component {&#10;  render() {&#10;    return (&#10;      &lt;Container&gt;&#10;        &lt;View&gt;&#10;          &lt;DeckSwiper&#10;            dataSource={cards}&#10;            renderItem={item =&gt;&#10;              &lt;Card style={{ elevation: 3 }}&gt;&#10;                &lt;CardItem&gt;&#10;                  &lt;Left&gt;&#10;                    &lt;Thumbnail source={item.image} /&gt;&#10;                    &lt;Body&gt;&#10;                      &lt;Text&gt;{item.text}&lt;/Text&gt;&#10;                      &lt;Text note&gt;NativeBase&lt;/Text&gt;&#10;                    &lt;/Body&gt;&#10;                  &lt;/Left&gt;&#10;                &lt;/CardItem&gt;&#10;                &lt;CardItem cardBody&gt;&#10;                  &lt;Image style={{ height: 300, flex: 1 }} source={item.image} /&gt;&#10;                &lt;/CardItem&gt;&#10;                &lt;CardItem&gt;&#10;                  &lt;Icon name=&quot;heart&quot; style={{ color: '#ED4A6A' }} /&gt;&#10;                  &lt;Text&gt;{item.name}&lt;/Text&gt;&#10;                &lt;/CardItem&gt;&#10;              &lt;/Card&gt;&#10;            }&#10;          /&gt;&#10;        &lt;/View&gt;&#10;      &lt;/Container&gt;&#10;    );&#10;  }&#10;}" description="DeckSwiper" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-fabs" value="import React, { Component } from 'react';&#10;import { Container, View, Button, Icon, Fab } from 'native-base';&#10;export default class FABExample extends Component {&#10;  constructor() {&#10;    this.state = {&#10;      active: 'true'&#10;    };&#10;  }&#10;  render() {&#10;    return (  &#10;      &lt;Container&gt;&#10;        &lt;View style={{ flex: 1 }}&gt;&#10;          &lt;Fab&#10;            active={this.state.active}&#10;            direction=&quot;up&quot;&#10;            containerStyle={{ }}&#10;            style={{ backgroundColor: '#5067FF' }}&#10;            position=&quot;bottomRight&quot;&#10;            onPress={() =&gt; this.setState({ active: !this.state.active })}&gt;&#10;            &lt;Icon name=&quot;share&quot; /&gt;&#10;            &lt;Button style={{ backgroundColor: '#34A34F' }}&gt;&#10;              &lt;Icon name=&quot;logo-whatsapp&quot; /&gt;&#10;            &lt;/Button&gt;&#10;            &lt;Button style={{ backgroundColor: '#3B5998' }}&gt;&#10;              &lt;Icon name=&quot;logo-facebook&quot; /&gt;&#10;            &lt;/Button&gt;&#10;            &lt;Button disabled style={{ backgroundColor: '#DD5144' }}&gt;&#10;              &lt;Icon name=&quot;mail&quot; /&gt;&#10;            &lt;/Button&gt;&#10;          &lt;/Fab&gt;&#10;        &lt;/View&gt;&#10;      &lt;/Container&gt;&#10;    );&#10;  }&#10;}" description="FABs 悬浮菜单" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-footer-tabs" value=" &lt;Footer&gt;&#10;          &lt;FooterTab&gt;&#10;            &lt;Button&gt;&#10;              &lt;Text&gt;Apps&lt;/Text&gt;&#10;            &lt;/Button&gt;&#10;            &lt;Button&gt;&#10;              &lt;Text&gt;Camera&lt;/Text&gt;&#10;            &lt;/Button&gt;&#10;            &lt;Button active&gt;&#10;              &lt;Text&gt;Navigate&lt;/Text&gt;&#10;            &lt;/Button&gt;&#10;            &lt;Button&gt;&#10;              &lt;Text&gt;Contact&lt;/Text&gt;&#10;            &lt;/Button&gt;&#10;          &lt;/FooterTab&gt;&#10;        &lt;/Footer&gt;" description="Footer Tabs" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-footer-tabs-icon" value=" &lt;Footer&gt;&#10;          &lt;FooterTab&gt;&#10;            &lt;Button&gt;&#10;              &lt;Icon name=&quot;apps&quot; /&gt;&#10;            &lt;/Button&gt;&#10;            &lt;Button&gt;&#10;              &lt;Icon name=&quot;camera&quot; /&gt;&#10;            &lt;/Button&gt;&#10;            &lt;Button active&gt;&#10;              &lt;Icon active name=&quot;navigate&quot; /&gt;&#10;            &lt;/Button&gt;&#10;            &lt;Button&gt;&#10;              &lt;Icon name=&quot;person&quot; /&gt;&#10;            &lt;/Button&gt;&#10;          &lt;/FooterTab&gt;&#10;        &lt;/Footer&gt;" description="Footer Tabs with icon" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-footer-tabs-icon-text" value="&lt;Footer&gt;&#10;          &lt;FooterTab&gt;&#10;            &lt;Button vertical&gt;&#10;              &lt;Icon name=&quot;apps&quot; /&gt;&#10;              &lt;Text&gt;Apps&lt;/Text&gt;&#10;            &lt;/Button&gt;&#10;            &lt;Button vertical&gt;&#10;              &lt;Icon name=&quot;camera&quot; /&gt;&#10;              &lt;Text&gt;Camera&lt;/Text&gt;&#10;            &lt;/Button&gt;&#10;            &lt;Button vertical active&gt;&#10;              &lt;Icon active name=&quot;navigate&quot; /&gt;&#10;              &lt;Text&gt;Navigate&lt;/Text&gt;&#10;            &lt;/Button&gt;&#10;            &lt;Button vertical&gt;&#10;              &lt;Icon name=&quot;person&quot; /&gt;&#10;              &lt;Text&gt;Contact&lt;/Text&gt;&#10;            &lt;/Button&gt;&#10;          &lt;/FooterTab&gt;&#10;        &lt;/Footer&gt;" description="Footer Tabs with icon and text" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-footer-tabs-icon-text-badge" value="        &lt;Footer&gt;&#10;          &lt;FooterTab&gt;&#10;            &lt;Button badge vertical&gt;&#10;              &lt;Badge&gt;&lt;Text&gt;2&lt;/Text&gt;&lt;/Badge&gt;&#10;              &lt;Icon name=&quot;apps&quot; /&gt;&#10;              &lt;Text&gt;Apps&lt;/Text&gt;&#10;            &lt;/Button&gt;&#10;            &lt;Button vertical&gt;&#10;              &lt;Icon name=&quot;camera&quot; /&gt;&#10;              &lt;Text&gt;Camera&lt;/Text&gt;&#10;            &lt;/Button&gt;&#10;            &lt;Button active badge vertical&gt;&#10;              &lt;Badge &gt;&lt;Text&gt;51&lt;/Text&gt;&lt;/Badge&gt;&#10;              &lt;Icon active name=&quot;navigate&quot; /&gt;&#10;              &lt;Text&gt;Navigate&lt;/Text&gt;&#10;            &lt;/Button&gt;&#10;            &lt;Button vertical&gt;&#10;              &lt;Icon name=&quot;person&quot; /&gt;&#10;              &lt;Text&gt;Contact&lt;/Text&gt;&#10;            &lt;/Button&gt;&#10;          &lt;/FooterTab&gt;&#10;        &lt;/Footer&gt;" description="Footer Tabs with icon and text and badge" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-forms" value="          &lt;Form&gt;&#10;            &lt;Item&gt;&#10;              &lt;Input placeholder=&quot;Username&quot; /&gt;&#10;            &lt;/Item&gt;&#10;            &lt;Item last&gt;&#10;              &lt;Input placeholder=&quot;Password&quot; /&gt;&#10;            &lt;/Item&gt;&#10;          &lt;/Form&gt;&#10;// itemprops(with label) -&gt; fixedLabel/inlineLabel/floatingLabel/stackedLabel/&#10;//itemprops(textbox) -&gt; regular/underline/rounded/ success/error/diasabled      " description="Forms" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-header" value="&lt;Header&gt;&#10;          &lt;Left&gt;&#10;            &lt;Button transparent&gt;&#10;              &lt;Icon name='arrow-back' /&gt;&#10;            &lt;/Button&gt;&#10;          &lt;/Left&gt;&#10;          &lt;Body&gt;&#10;            &lt;Title&gt;Header&lt;/Title&gt;&#10;          &lt;/Body&gt;&#10;          &lt;Right&gt;&#10;            &lt;Button transparent&gt;&#10;              &lt;Icon name='menu' /&gt;&#10;            &lt;/Button&gt;&#10;          &lt;/Right&gt;&#10;        &lt;/Header&gt;" description="Header" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-header-title" value="        &lt;Header&gt;&#10;            &lt;Left/&gt;&#10;            &lt;Body&gt;&#10;                &lt;Title&gt;Header&lt;/Title&gt;&#10;            &lt;/Body&gt;&#10;            &lt;Right /&gt;&#10;        &lt;/Header&gt;" description="Header with only title" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-header-icon-textbtn" value=" &lt;Header&gt;&#10;          &lt;Left&gt;&#10;            &lt;Button transparent&gt;&#10;              &lt;Icon name='arrow-back' /&gt;&#10;            &lt;/Button&gt;&#10;          &lt;/Left&gt;&#10;          &lt;Body&gt;&#10;            &lt;Title&gt;Header&lt;/Title&gt;&#10;          &lt;/Body&gt;&#10;          &lt;Right&gt;&#10;            &lt;Button transparent&gt;&#10;              &lt;Text&gt;Cancel&lt;/Text&gt;&#10;            &lt;/Button&gt;&#10;          &lt;/Right&gt;&#10;        &lt;/Header&gt;" description="Header with icon and text buttons" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-header-subtitle" value=" &lt;Header&gt;&#10;          &lt;Left&gt;&#10;            &lt;Button transparent&gt;&#10;              &lt;Icon name='arrow-back' /&gt;&#10;            &lt;/Button&gt;&#10;          &lt;/Left&gt;&#10;          &lt;Body&gt;&#10;            &lt;Title&gt;Title&lt;/Title&gt;&#10;            &lt;Subtitle&gt;Subtitle&lt;/Subtitle&gt;&#10;          &lt;/Body&gt;&#10;          &lt;Right /&gt;&#10;        &lt;/Header&gt;" description="Header with subtitle" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-icon" value="&lt;Icon name='$ICONNAME$' ios=&quot;$IOSNAME$&quot; android=&quot;$ANDROIDNAME$ active color=&quot;$COLOR$ fontSize=&quot;$FONTSIZE&quot;/&gt;" description="Icon" toReformat="true" toShortenFQNames="true">
+    <variable name="ICONNAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="IOSNAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="ANDROIDNAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="COLOR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-grid" value="          &lt;Grid&gt;&#10;            &lt;Col style={{ backgroundColor: '#D954D7', height: 200 }}&gt;&lt;/Col&gt;&#10;          &lt;/Grid&gt;" description="Grid" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-list" value="          &lt;List&gt;&#10;            &lt;ListItem&gt;&#10;              &lt;Text&gt;Simon Mignolet&lt;/Text&gt;&#10;            &lt;/ListItem&gt;&#10;            &lt;ListItem&gt;&#10;              &lt;Text&gt;Nathaniel Clyne&lt;/Text&gt;&#10;            &lt;/ListItem&gt;&#10;            &lt;ListItem&gt;&#10;              &lt;Text&gt;Dejan Lovren&lt;/Text&gt;&#10;            &lt;/ListItem&gt;&#10;          &lt;/List&gt;&#10;          //itemDivider itemHeader icon avatar " description="List" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-list-avator" value="          &lt;List&gt;&#10;            &lt;ListItem avatar&gt;&#10;              &lt;Left&gt;&#10;                &lt;Thumbnail source={{ uri: 'Image URL' }} /&gt;&#10;              &lt;/Left&gt;&#10;              &lt;Body&gt;&#10;                &lt;Text&gt;Kumar Pratik&lt;/Text&gt;&#10;                &lt;Text note&gt;Doing what you like will always keep you happy . .&lt;/Text&gt;&#10;              &lt;/Body&gt;&#10;              &lt;Right&gt;&#10;                &lt;Text note&gt;3:43 pm&lt;/Text&gt;&#10;              &lt;/Right&gt;&#10;            &lt;/ListItem&gt;&#10;          &lt;/List&gt;" description="List with avator" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-list-thumbnail" value="&lt;List&gt;&#10;            &lt;ListItem&gt;&#10;              &lt;Thumbnail square size={80} source={{ uri: 'Image URL' }} /&gt;&#10;              &lt;Body&gt;&#10;                &lt;Text&gt;Sankhadeep&lt;/Text&gt;&#10;                &lt;Text note&gt;Its time to build a difference . .&lt;/Text&gt;&#10;              &lt;/Body&gt;&#10;            &lt;/ListItem&gt;&#10;          &lt;/List&gt;" description="List with thumbnail" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-list-dynamic" value="          &lt;List dataArray={items}&#10;            renderRow={(item) =&gt;&#10;              &lt;ListItem&gt;&#10;                &lt;Text&gt;{item}&lt;/Text&gt;&#10;              &lt;/ListItem&gt;&#10;            }&gt;&#10;          &lt;/List&gt;" description="Dynamic-list" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-separator" value="&lt;Separator bordered&gt;&#10;    &lt;Text&gt;FORWARD&lt;/Text&gt;&#10;&lt;/Separator&gt;" description="separtor 和列表一起使用" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-picker" value=" &lt;Picker&#10;            supportedOrientations={['portrait','landscape']}&#10;            iosHeader=&quot;$IOSHEADER$&quot;&#10;            headerBackButtonText=&quot;$BACKTEXT$&quot;&#10;            mode=&quot;dropdown&quot;&#10;            selectedValue={this.state.selected}&#10;            onValueChange={this.onValueChange.bind(this)}&gt;&#10;            &lt;Item label=&quot;Wallet&quot; value=&quot;key0&quot; /&gt;&#10;            &lt;Item label=&quot;ATM Card&quot; value=&quot;key1&quot; /&gt;&#10;            &lt;Item label=&quot;Credit Card&quot; value=&quot;key2&quot; /&gt;&#10;            &lt;Item label=&quot;Debit Card&quot; value=&quot;key3&quot; /&gt;&#10;         &lt;/Picker&gt;" description="Picker" toReformat="true" toShortenFQNames="true">
+    <variable name="IOSHEADER" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="BACKTEXT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-radio" value=" &lt;Radio selected={false} /&gt;" description="Radio" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-searchbar" value="        &lt;Header searchBar rounded&gt;&#10;          &lt;Item&gt;&#10;            &lt;Icon name=&quot;ios-search&quot; /&gt;&#10;            &lt;Input placeholder=&quot;Search&quot; /&gt;&#10;            &lt;Icon name=&quot;ios-people&quot; /&gt;&#10;          &lt;/Item&gt;&#10;          &lt;Button transparent&gt;&#10;            &lt;Text&gt;Search&lt;/Text&gt;&#10;          &lt;/Button&gt;&#10;        &lt;/Header&gt;" description="SearchBar" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-segment" value="        &lt;Header&gt;&#10;          &lt;Left&gt;&#10;            &lt;Button transparent&gt;&#10;              &lt;Icon name=&quot;arrow-back&quot; /&gt;&#10;            &lt;/Button&gt;&#10;          &lt;/Left&gt;&#10;          &lt;Body&gt;&#10;            &lt;Segment&gt;&#10;              &lt;Button first&gt;&lt;Text&gt;Puppies&lt;/Text&gt;&lt;/Button&gt;&#10;              &lt;Button last active&gt;&lt;Text&gt;Cubs&lt;/Text&gt;&lt;/Button&gt;&#10;            &lt;/Segment&gt;&#10;          &lt;/Body&gt;&#10;          &lt;Right&gt;&#10;            &lt;Button transparent&gt;&#10;              &lt;Icon name=&quot;search&quot; /&gt;&#10;            &lt;/Button&gt;&#10;          &lt;/Right&gt;&#10;        &lt;/Header&gt;&#10;        &lt;Content padder&gt;&#10;          &lt;Text&gt;Awesome segment&lt;/Text&gt;&#10;        &lt;/Content&gt;" description="Segment" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-spinner" value="&lt;Spinner color='$COLOR$' /&gt;" description="Spinner/loading" toReformat="true" toShortenFQNames="true">
+    <variable name="COLOR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-tabs" value="        &lt;Header hasTabs /&gt;&#10;        &lt;Tabs initialPage={1}&gt;&#10;          &lt;Tab heading=&quot;Tab1&quot;&gt;&#10;            &lt;Tab1 /&gt;&#10;          &lt;/Tab&gt;&#10;          &lt;Tab heading=&quot;Tab2&quot;&gt;&#10;            &lt;Tab2 /&gt;&#10;          &lt;/Tab&gt;&#10;          &lt;Tab heading=&quot;Tab3&quot;&gt;&#10;            &lt;Tab3 /&gt;&#10;          &lt;/Tab&gt;&#10;        &lt;/Tabs&gt;" description="Tabs" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-tab-advance" value="          &lt;Tab heading={ &lt;TabHeading&gt;&lt;Icon name=&quot;camera&quot; /&gt;&lt;Text&gt;Camera&lt;/Text&gt;&lt;/TabHeading&gt;}&gt;&#10;            &lt;Tab1 /&gt;&#10;          &lt;/Tab&gt;" description="tab 自定义" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-tabs-scroller" value=" &lt;Tabs renderTabBar={()=&gt; &lt;ScrollableTab /&gt;}&gt;&#10;          &lt;Tab heading=&quot;Tab1&quot;&gt;&#10;              &lt;Tab1 /&gt;&#10;          &lt;/Tab&gt;&#10;          &lt;Tab heading=&quot;Tab2&quot;&gt;&#10;              &lt;Tab2 /&gt;&#10;          &lt;/Tab&gt;&#10;          &lt;Tab heading=&quot;Tab3&quot;&gt;&#10;              &lt;Tab3 /&gt;&#10;          &lt;/Tab&gt;&#10;          &lt;Tab heading=&quot;Tab4&quot;&gt;&#10;              &lt;Tab4 /&gt;&#10;          &lt;/Tab&gt;&#10;          &lt;Tab heading=&quot;Tab5&quot;&gt;&#10;              &lt;Tab5 /&gt;&#10;          &lt;/Tab&gt;&#10;        &lt;/Tabs&gt;" description="tabs scroller" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-thumbnail" value=" &lt;Thumbnail square small source={{uri: 'Image URL'}} /&gt;" description="Thumbnail" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-toast" value=" Toast.show({&#10;              supportedOrientations: ['portrait','landscape'],&#10;              text: '$TEXT$',&#10;              position: 'bottom',&#10;              buttonText: '$BUTTONTEXT$',&#10;              duration: '$DURATION$'&#10;            })" description="Toast" toReformat="true" toShortenFQNames="true">
+    <variable name="TEXT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="BUTTONTEXT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DURATION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+  <template name="nb-drawer" value="      &lt;Drawer&#10;        ref={(ref) =&gt; { this.drawer = ref; }}&#10;        content={&lt;SideBar navigator={this.navigator} /&gt;}&#10;        onClose={() =&gt; this.closeDrawer()} &gt;&#10;      // Main View&#10;      &lt;/Drawer&gt;" description="Drawer" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+</templateSet>
