@@ -1,0 +1,585 @@
+<templateSet group="vue-element">
+  <template name="elm-btn-primary" value="&lt;el-button type=&quot;primary&quot;&gt;$TEXT$&lt;/el-button&gt;$END$" description="elment button" toReformat="false" toShortenFQNames="true">
+    <variable name="TEXT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-btn-disabled" value="&lt;el-button type=&quot;text&quot; :disabled=&quot;true&quot;&gt;$TEXT$&lt;/el-button&gt;$END" description="Button disabled" toReformat="false" toShortenFQNames="true">
+    <variable name="TEXT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-btn-group" value="&lt;el-button-group&gt;&#10;  &lt;el-button type=&quot;primary&quot; icon=&quot;arrow-left&quot;&gt;上一页&lt;/el-button&gt;&#10;  &lt;el-button type=&quot;primary&quot;&gt;下一页&lt;i class=&quot;el-icon-arrow-right el-icon--right&quot;&gt;&lt;/i&gt;&lt;/el-button&gt;&#10;&lt;/el-button-group&gt;" description="按钮组" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-btn-all" value="&lt;el-button type=&quot;primary&quot; size=&quot;$SIZE$&quot; :plain=true :loading=true :disabled=true icon=$ICON$ :autofocus=true native-type=&quot;button&quot;&gt;大型按钮&lt;/el-button&gt;" description="with all api controls" toReformat="true" toShortenFQNames="true">
+    <variable name="SIZE" expression="" defaultValue="large/small/mini" alwaysStopAt="true" />
+    <variable name="ICON" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-radio-basic" value="&lt;el-radio class=&quot;radio&quot; v-model=&quot;radio&quot; label=&quot;1&quot;&gt;$TEXT$&lt;/el-radio&gt;$END$" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="TEXT" expression="" defaultValue="" alwaysStopAt="true" />
+  </template>
+  <template name="elm-radio-disabled" value="&lt;el-radio class=&quot;radio&quot; disabled v-model=&quot;radio&quot; label=&quot;1&quot;&gt;$TEXT$&lt;/el-radio&gt;$END$" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="TEXT" expression="" defaultValue="" alwaysStopAt="true" />
+  </template>
+  <template name="elm-radio-group" value="&lt;el-radio-group v-model=&quot;radio2&quot; size=&quot;$large/small/null$&quot; fill=&quot;$#20a0ff$&quot; text-color=&quot;$按钮激活时颜色$&quot; @change=&quot;$callback(radiolabel)$&quot;&gt;&#10;    &lt;el-radio :label=&quot;3&quot;&gt;备选项&lt;/el-radio&gt;&#10;    &lt;el-radio :label=&quot;6&quot;&gt;备选项&lt;/el-radio&gt;&#10;    &lt;el-radio :label=&quot;9&quot;&gt;备选项&lt;/el-radio&gt;&#10; &lt;/el-radio-group&gt;" description="单选框按钮组" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-radio-btn" value="&lt;el-radio-button label=&quot;上海&quot;&gt;&lt;/el-radio-button&gt;" description="按钮样式" toReformat="false" toShortenFQNames="true" />
+  <template name="elm-checkbox-basic" value=" &lt;el-checkbox v-model=&quot;checked&quot;&gt;$TEXT$&lt;/el-checkbox&gt;" description="多选框" toReformat="false" toShortenFQNames="true">
+    <variable name="TEXT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-checkbox-all" value="  &lt;el-checkbox :indeterminate=&quot;isIndeterminate&quot; v-model=&quot;checkAll&quot; @change=&quot;handleCheckAllChange&quot;&gt;全选&lt;/el-checkbox&gt;&#10;  &lt;div style=&quot;margin: 15px 0;&quot;&gt;&lt;/div&gt;&#10;  &lt;el-checkbox-group v-model=&quot;checkedCities&quot; @change=&quot;handleCheckedCitiesChange&quot;&gt;&#10;    &lt;el-checkbox v-for=&quot;city in cities&quot; :label=&quot;city&quot;&gt;{{city}}&lt;/el-checkbox&gt;&#10;  &lt;/el-checkbox-group&gt;" description="多选框包含全选 选项组" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-input" value="&lt;el-input v-model=&quot;input&quot; placeholder=&quot;请输入内容&quot;&gt;&lt;/el-input&gt;" description="输入框" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-input-icon" value="&lt;el-input&#10;  placeholder=&quot;请选择日期&quot;&#10;  icon=&quot;search&quot;&#10;  v-model=&quot;input2&quot;&#10;  :on-icon-click=&quot;handleIconClick&quot;&gt;&#10;&lt;/el-input&gt;" description="带图标的input" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-textarea" value="&lt;el-input&#10;  type=&quot;textarea&quot;&#10;  :rows=&quot;2&quot;&#10;  placeholder=&quot;请输入内容&quot;&#10;  v-model=&quot;textarea&quot;&gt;&#10;&lt;/el-input&gt;" description="文本域" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-textarea-resize" value="&lt;el-input&#10;  type=&quot;textarea&quot;&#10;  autosize&#10;  placeholder=&quot;请输入内容&quot;&#10;  v-model=&quot;textarea2&quot;&gt;&#10;&lt;/el-input&gt;" description="自适应文本域" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-input-composite" value="  &lt;el-input placeholder=&quot;请输入内容&quot; v-model=&quot;input3&quot;&gt;&#10;    &lt;template slot=&quot;prepend&quot;&gt;Http://&lt;/template&gt;&#10;  &lt;/el-input&gt;" description="复合输入框" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-autocomplete" value=" &lt;el-autocomplete&#10;      class=&quot;inline-input&quot;&#10;      v-model=&quot;state1&quot;&#10;      :fetch-suggestions=&quot;querySearch&quot;&#10;      placeholder=&quot;请输入内容&quot;&#10;      @select=&quot;handleSelect&quot;&#10;      :trigger-on-focus=&quot;$是否在输入框 focus 时显示建议列表$&quot;&#10;      custom-item=&quot;$通过该参数指定自定义的输入建议列表项的组件名$&quot;&#10;      popper-class=&quot;$下拉列表的类名$&quot;&#10;    &gt;&lt;/el-autocomplete&gt;" description="带输入建议的输入框" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-select" value="  &lt;el-select v-model=&quot;value&quot; placeholder=&quot;请选择&quot;&gt;&#10;    &lt;el-option&#10;      v-for=&quot;item in options&quot;&#10;      :label=&quot;item.label&quot;&#10;      :value=&quot;item.value&quot;&gt;&#10;    &lt;/el-option&gt;&#10;  &lt;/el-select&gt;" description="选择器" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-select-clear" value="  &lt;el-select v-model=&quot;value&quot; placeholder=&quot;请选择&quot; clearable &gt;&#10;    &lt;el-option&#10;      v-for=&quot;item in options&quot;&#10;      :label=&quot;item.label&quot;&#10;      :value=&quot;item.value&quot;&gt;&#10;    &lt;/el-option&gt;&#10;  &lt;/el-select&gt;" description="选择器可清除" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-select-multiple" value="  &lt;el-select v-model=&quot;value&quot; placeholder=&quot;请选择&quot; clearable multiple multiple-limit=&quot;$多选时用户最多可以选择的项目数$&quot;&gt;&#10;    &lt;el-option&#10;      v-for=&quot;item in options&quot;&#10;      :label=&quot;item.label&quot;&#10;      :value=&quot;item.value&quot;&gt;&#10;    &lt;/el-option&gt;&#10;  &lt;/el-select&gt;" description="多选选择器" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-select-custom" value="  &lt;el-select v-model=&quot;value6&quot; placeholder=&quot;请选择&quot;&gt;&#10;    &lt;el-option&#10;      v-for=&quot;item in cities&quot;&#10;      :label=&quot;item.label&quot;&#10;      :value=&quot;item.value&quot;&gt;&#10;      &lt;span style=&quot;float: left&quot;&gt;{{ item.label }}&lt;/span&gt;&#10;      &lt;span style=&quot;float: right; color: #8492a6; font-size: 13px&quot;&gt;{{ item.value }}&lt;/span&gt;&#10;    &lt;/el-option&gt;" description="选择器（自定义模板）" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-select-group" value="  &lt;el-select v-model=&quot;value7&quot; placeholder=&quot;请选择&quot;&gt;&#10;    &lt;el-option-group&#10;      v-for=&quot;group in options3&quot;&#10;      :label=&quot;group.label&quot;&gt;&#10;      &lt;el-option&#10;        v-for=&quot;item in group.options&quot;&#10;        :label=&quot;item.label&quot;&#10;        :value=&quot;item.value&quot;&gt;&#10;      &lt;/el-option&gt;&#10;    &lt;/el-option-group&gt;&#10;  &lt;/el-select&gt;" description="选择器（带分组）" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-select-filterable" value="  &lt;el-select v-model=&quot;value8&quot; filterable placeholder=&quot;请选择&quot;&gt;&#10;    &lt;el-option&#10;      v-for=&quot;item in options&quot;&#10;      :label=&quot;item.label&quot;&#10;      :value=&quot;item.value&quot;&gt;&#10;    &lt;/el-option&gt;&#10;  &lt;/el-select&gt;" description="选择器（可搜索）" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-select-remote-search" value="  &lt;el-select&#10;    v-model=&quot;value9&quot;&#10;    multiple&#10;    filterable&#10;    remote&#10;    placeholder=&quot;请输入关键词&quot;&#10;    :remote-method=&quot;remoteMethod&quot;&#10;    :loading=&quot;$是否正在从远程获取数据$&quot;&#10;    :loading-text=&quot;$远程加载时显示的文字$&quot;&#10;    &gt;&#10;    &lt;el-option&#10;      v-for=&quot;item in options4&quot;&#10;      :key=&quot;item.value&quot;&#10;      :label=&quot;item.label&quot;&#10;      :value=&quot;item.value&quot;&gt;&#10;    &lt;/el-option&gt;&#10;  &lt;/el-select&gt;" description="选择器（远程搜索" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-select-create" value="  &lt;el-select&#10;    v-model=&quot;value10&quot;&#10;    multiple&#10;    filterable&#10;    allow-create&#10;    placeholder=&quot;请选择文章标签&quot;&gt;&#10;    &lt;el-option&#10;      v-for=&quot;item in options5&quot;&#10;      :label=&quot;item.label&quot;&#10;      :value=&quot;item.value&quot;&gt;&#10;    &lt;/el-option&gt;&#10;  &lt;/el-select&gt;" description="选择器（可创建条目" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-cascader" value="  &lt;el-cascader&#10;    :options=&quot;options&quot;&#10;    v-model=&quot;selectedOptions&quot;&#10;    @change=&quot;handleChange&quot;&#10;    expand-trigger=&quot;$触发方式，可hover$&quot;&#10;    &gt;&#10;  &lt;/el-cascader&gt;&#10;  &#10;      &lt;!--options: [{--&gt;&#10;          &lt;!--value: 'zhinan',--&gt;&#10;          &lt;!--label: '指南',--&gt;&#10;          &lt;!--children: [{--&gt;" description="Cascader级联选择器" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-cascader-dynamic" value="&lt;el-cascader&#10;  :options=&quot;options2&quot;&#10;  @active-item-change=&quot;handleItemChange&quot;&#10;  :props=&quot;props&quot;&#10;&gt;&lt;/el-cascader&gt;" description="Cascader级联选择器（动态加载次级选项" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-cascader-search" value="  &lt;el-cascader&#10;    placeholder=&quot;试试搜索：指南&quot;&#10;    :options=&quot;options&quot;&#10;    filterable&#10;    change-on-select&#10;  &gt;&lt;/el-cascader&gt;" description="Cascader级联选择器（搜索-可选择任何一级菜单change-on-select" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-switch" value="&lt;el-switch&#10;  v-model=&quot;value1&quot;&#10;  on-text=&quot;&quot;&#10;  off-text=&quot;&quot;&#10;  on-color=&quot;#13ce66&quot;&#10;  off-color=&quot;#ff4949&quot;&#10;  &gt;&#10;&lt;/el-switch&gt;" description="Switch 开关" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-timepicker" value="&lt;el-time-select&#10;  v-model=&quot;value1&quot;&#10;  :picker-options=&quot;{&#10;    start: '08:30',&#10;    step: '00:15',&#10;    end: '18:30'&#10;  }&quot;&#10;  placeholder=&quot;选择时间&quot;&gt;&#10;&lt;/el-time-select&gt;&#10;" description="时间选择" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-timepicker-any" value="  &lt;el-time-picker&#10;    v-model=&quot;value2&quot;&#10;    :picker-options=&quot;{&#10;      selectableRange: '18:30:00 - 20:30:00'&#10;    }&quot;&#10;    placeholder=&quot;任意时间点&quot;&gt;&#10;  &lt;/el-time-picker&gt;" description="时间选择任意时间点" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-timepicker-range" value="&lt;el-time-select&#10;    placeholder=&quot;起始时间&quot;&#10;    v-model=&quot;startTime&quot;&#10;    :picker-options=&quot;{&#10;      start: '08:30',&#10;      step: '00:15',&#10;      end: '18:30'&#10;    }&quot;&gt;&#10;  &lt;/el-time-select&gt;&#10;  &lt;el-time-select&#10;    placeholder=&quot;结束时间&quot;&#10;    v-model=&quot;endTime&quot;&#10;    :picker-options=&quot;{&#10;      start: '08:30',&#10;      step: '00:15',&#10;      end: '18:30',&#10;      minTime: startTime&#10;    }&quot;&gt;&#10;  &lt;/el-time-select&gt;" description="时间选择（选择范围" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-timepicker-anyrange" value="  &lt;el-time-picker&#10;    is-range&#10;    v-model=&quot;value3&quot;&#10;    placeholder=&quot;选择时间范围&quot;&gt;&#10;  &lt;/el-time-picker&gt;" description="时间选择（任意范围" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-datepicker" value="    &lt;el-date-picker&#10;      v-model=&quot;value1&quot;&#10;      type=&quot;date&quot;&#10;      placeholder=&quot;选择日期&quot;&#10;      :picker-options=&quot;pickerOptions0&quot;&gt;&#10;    &lt;/el-date-picker&gt;" description="日期选择" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-datepicker-quick" value="    &lt;el-date-picker&#10;      v-model=&quot;value2&quot;&#10;      align=&quot;right&quot;&#10;      type=&quot;date&quot;&#10;      placeholder=&quot;选择日期&quot;&#10;      :picker-options=&quot;pickerOptions1&quot;&gt;&#10;    &lt;/el-date-picker&gt;&#10;    &#10;    &#10;         &lt;!--shortcuts: [{--&gt;&#10;           &lt;!--text: '今天',--&gt;&#10;           &lt;!--onClick(picker) {--&gt;&#10;             &lt;!--picker.$emit('pick', new Date());--&gt;&#10;           &lt;!--}--&gt;&#10;         &lt;!--}, {--&gt;&#10;           &lt;!--text: '昨天',--&gt;&#10;           &lt;!--onClick(picker) {--&gt;&#10;             &lt;!--const date = new Date();--&gt;&#10;             &lt;!--date.setTime(date.getTime() - 3600 * 1000 * 24);--&gt;&#10;             &lt;!--picker.$emit('pick', date);--&gt;&#10;           &lt;!--}--&gt;&#10;         &lt;!--}, {--&gt;&#10;           &lt;!--text: '一周前',--&gt;&#10;           &lt;!--onClick(picker) {--&gt;&#10;             &lt;!--const date = new Date();--&gt;&#10;             &lt;!--date.setTime(date.getTime() - 3600 * 1000 * 24 * 7);--&gt;&#10;             &lt;!--picker.$emit('pick', date);--&gt;&#10;           &lt;!--}--&gt;&#10;         &lt;!--}]--&gt;" description="日期选择（带快捷键" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-datepicker-week" value=" &lt;el-date-picker&#10;    v-model=&quot;value3&quot;&#10;    type=&quot;week&quot;&#10;    format=&quot;yyyy 第 WW 周&quot;&#10;    placeholder=&quot;选择周&quot;&gt;&#10;  &lt;/el-date-picker&gt;" description="日期选择（周" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-datepicker-year" value="  &lt;el-date-picker&#10;    v-model=&quot;value5&quot;&#10;    align=&quot;right&quot;&#10;    type=&quot;year&quot;&#10;    placeholder=&quot;选择年&quot;&gt;&#10;  &lt;/el-date-picker&gt;" description="日期选择（年" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-datepicker-month" value="  &lt;el-date-picker&#10;    v-model=&quot;value4&quot;&#10;    type=&quot;month&quot;&#10;    placeholder=&quot;选择月&quot;&gt;&#10;  &lt;/el-date-picker&gt;" description="日期选择（月" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-datepicker-range" value="    &lt;el-date-picker&#10;      v-model=&quot;value6&quot;&#10;      type=&quot;daterange&quot;&#10;      placeholder=&quot;选择日期范围&quot;&gt;&#10;    &lt;/el-date-picker&gt;" description="日期选择（日期范围" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-datepicker-range-quick" value="    &lt;el-date-picker&#10;      v-model=&quot;value7&quot;&#10;      type=&quot;daterange&quot;&#10;      align=&quot;right&quot;&#10;      placeholder=&quot;选择日期范围&quot;&#10;      :picker-options=&quot;pickerOptions2&quot;&gt;&#10;    &lt;/el-date-picker&gt;&#10;    &#10;     pickerOptions2: {&#10;          shortcuts: [{&#10;            text: '最近一周',&#10;            onClick(picker) {&#10;              const end = new Date();&#10;              const start = new Date();&#10;              start.setTime(start.getTime() - 3600 * 1000 * 24 * 7);&#10;              picker.$emit('pick', [start, end]);&#10;            }&#10;          }, {&#10;            text: '最近一个月',&#10;            onClick(picker) {&#10;              const end = new Date();&#10;              const start = new Date();&#10;              start.setTime(start.getTime() - 3600 * 1000 * 24 * 30);&#10;              picker.$emit('pick', [start, end]);&#10;            }&#10;          }, {&#10;            text: '最近三个月',&#10;            onClick(picker) {&#10;              const end = new Date();&#10;              const start = new Date();&#10;              start.setTime(start.getTime() - 3600 * 1000 * 24 * 90);&#10;              picker.$emit('pick', [start, end]);&#10;            }&#10;          }]" description="日期选择（选择范围带快捷键" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-datetimepicker" value="&lt;el-date-picker&#10;      v-model=&quot;value1&quot;&#10;      type=&quot;datetime&quot;&#10;      placeholder=&quot;选择日期时间&quot;&gt;&#10;    &lt;/el-date-picker&gt;" description="日期时间选择" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-datetimepicker-quick" value="    &lt;el-date-picker&#10;      v-model=&quot;value2&quot;&#10;      type=&quot;datetime&quot;&#10;      placeholder=&quot;选择日期时间&quot;&#10;      align=&quot;right&quot;&#10;      :picker-options=&quot;pickerOptions1&quot;&gt;&#10;    &lt;/el-date-picker&gt;&#10;    &#10;            pickerOptions1: {&#10;          shortcuts: [{&#10;            text: '今天',&#10;            onClick(picker) {&#10;              picker.$emit('pick', new Date());&#10;            }&#10;          }, {&#10;            text: '昨天',&#10;            onClick(picker) {&#10;              const date = new Date();&#10;              date.setTime(date.getTime() - 3600 * 1000 * 24);&#10;              picker.$emit('pick', date);&#10;            }&#10;          }, {&#10;            text: '一周前',&#10;            onClick(picker) {&#10;              const date = new Date();&#10;              date.setTime(date.getTime() - 3600 * 1000 * 24 * 7);&#10;              picker.$emit('pick', date);&#10;            }&#10;          }]&#10;        }," description="日期时间选择(快捷方式" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-datetimepicker-range" value="&lt;el-date-picker&#10;      v-model=&quot;value3&quot;&#10;      type=&quot;datetimerange&quot;&#10;      placeholder=&quot;选择时间范围&quot;&gt;&#10;    &lt;/el-date-picker&gt;" description="日期时间选择(范围" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-datetimepicker-range-quick" value=" &lt;el-date-picker&#10;      v-model=&quot;value4&quot;&#10;      type=&quot;datetimerange&quot;&#10;      :picker-options=&quot;pickerOptions2&quot;&#10;      placeholder=&quot;选择时间范围&quot;&#10;      align=&quot;right&quot;&gt;&#10;    &lt;/el-date-picker&gt;&#10;    &#10;    pickerOptions2: {&#10;          shortcuts: [{&#10;            text: '最近一周',&#10;            onClick(picker) {&#10;              const end = new Date();&#10;              const start = new Date();&#10;              start.setTime(start.getTime() - 3600 * 1000 * 24 * 7);&#10;              picker.$emit('pick', [start, end]);&#10;            }&#10;          }, {&#10;            text: '最近一个月',&#10;            onClick(picker) {&#10;              const end = new Date();&#10;              const start = new Date();&#10;              start.setTime(start.getTime() - 3600 * 1000 * 24 * 30);&#10;              picker.$emit('pick', [start, end]);&#10;            }&#10;          }, {&#10;            text: '最近三个月',&#10;            onClick(picker) {&#10;              const end = new Date();&#10;              const start = new Date();&#10;              start.setTime(start.getTime() - 3600 * 1000 * 24 * 90);&#10;              picker.$emit('pick', [start, end]);&#10;            }&#10;          }]&#10;        }," description="日期时间选择(范围-带快捷键" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-form-basic" value="&lt;el-form ref=&quot;form&quot; :model=&quot;form&quot; label-width=&quot;80px&quot; :label-position=&quot;$表单位置(top,left,right)$&quot;&gt;&#10;  &lt;el-form-item label=&quot;活动名称&quot;&gt;&#10;    &lt;el-input v-model=&quot;form.name&quot;&gt;&lt;/el-input&gt;&#10;  &lt;/el-form-item&gt;&#10;  &lt;el-form-item label=&quot;活动区域&quot;&gt;&#10;    &lt;el-select v-model=&quot;form.region&quot; placeholder=&quot;请选择活动区域&quot;&gt;&#10;      &lt;el-option label=&quot;区域一&quot; value=&quot;shanghai&quot;&gt;&lt;/el-option&gt;&#10;      &lt;el-option label=&quot;区域二&quot; value=&quot;beijing&quot;&gt;&lt;/el-option&gt;&#10;    &lt;/el-select&gt;&#10;  &lt;/el-form-item&gt;&#10;  &lt;el-form-item label=&quot;活动时间&quot;&gt;&#10;    &lt;el-col :span=&quot;11&quot;&gt;&#10;      &lt;el-date-picker type=&quot;date&quot; placeholder=&quot;选择日期&quot; v-model=&quot;form.date1&quot; style=&quot;width: 100%;&quot;&gt;&lt;/el-date-picker&gt;&#10;    &lt;/el-col&gt;&#10;    &lt;el-col class=&quot;line&quot; :span=&quot;2&quot;&gt;-&lt;/el-col&gt;&#10;    &lt;el-col :span=&quot;11&quot;&gt;&#10;      &lt;el-time-picker type=&quot;fixed-time&quot; placeholder=&quot;选择时间&quot; v-model=&quot;form.date2&quot; style=&quot;width: 100%;&quot;&gt;&lt;/el-time-picker&gt;&#10;    &lt;/el-col&gt;&#10;  &lt;/el-form-item&gt;&#10;  &lt;el-form-item label=&quot;即时配送&quot;&gt;&#10;    &lt;el-switch on-text=&quot;&quot; off-text=&quot;&quot; v-model=&quot;form.delivery&quot;&gt;&lt;/el-switch&gt;&#10;  &lt;/el-form-item&gt;&#10;  &lt;el-form-item label=&quot;活动性质&quot;&gt;&#10;    &lt;el-checkbox-group v-model=&quot;form.type&quot;&gt;&#10;      &lt;el-checkbox label=&quot;美食/餐厅线上活动&quot; name=&quot;type&quot;&gt;&lt;/el-checkbox&gt;&#10;      &lt;el-checkbox label=&quot;地推活动&quot; name=&quot;type&quot;&gt;&lt;/el-checkbox&gt;&#10;      &lt;el-checkbox label=&quot;线下主题活动&quot; name=&quot;type&quot;&gt;&lt;/el-checkbox&gt;&#10;      &lt;el-checkbox label=&quot;单纯品牌曝光&quot; name=&quot;type&quot;&gt;&lt;/el-checkbox&gt;&#10;    &lt;/el-checkbox-group&gt;&#10;  &lt;/el-form-item&gt;&#10;  &lt;el-form-item label=&quot;特殊资源&quot;&gt;&#10;    &lt;el-radio-group v-model=&quot;form.resource&quot;&gt;&#10;      &lt;el-radio label=&quot;线上品牌商赞助&quot;&gt;&lt;/el-radio&gt;&#10;      &lt;el-radio label=&quot;线下场地免费&quot;&gt;&lt;/el-radio&gt;&#10;    &lt;/el-radio-group&gt;&#10;  &lt;/el-form-item&gt;&#10;  &lt;el-form-item label=&quot;活动形式&quot;&gt;&#10;    &lt;el-input type=&quot;textarea&quot; v-model=&quot;form.desc&quot;&gt;&lt;/el-input&gt;&#10;  &lt;/el-form-item&gt;&#10;  &lt;el-form-item&gt;&#10;    &lt;el-button type=&quot;primary&quot; @click=&quot;onSubmit&quot;&gt;立即创建&lt;/el-button&gt;&#10;    &lt;el-button&gt;取消&lt;/el-button&gt;&#10;  &lt;/el-form-item&gt;&#10;&lt;/el-form&gt;&#10;&lt;script&gt;&#10;  export default {&#10;    data() {&#10;      return {&#10;        form: {&#10;          name: '',&#10;          region: '',&#10;          date1: '',&#10;          date2: '',&#10;          delivery: false,&#10;          type: [],&#10;          resource: '',&#10;          desc: ''&#10;        }&#10;      }&#10;    },&#10;    methods: {&#10;      onSubmit() {&#10;        console.log('submit!');&#10;      }&#10;    }&#10;  }&#10;&lt;/script&gt;" description="典型表单" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-form-inline" value="&lt;el-form :inline=&quot;true&quot; :model=&quot;formInline&quot; class=&quot;demo-form-inline&quot;&gt;&#10;  &lt;el-form-item label=&quot;审批人&quot;&gt;&#10;    &lt;el-input v-model=&quot;formInline.user&quot; placeholder=&quot;审批人&quot;&gt;&lt;/el-input&gt;&#10;  &lt;/el-form-item&gt;&#10;  &lt;el-form-item label=&quot;活动区域&quot;&gt;&#10;    &lt;el-select v-model=&quot;formInline.region&quot; placeholder=&quot;活动区域&quot;&gt;&#10;      &lt;el-option label=&quot;区域一&quot; value=&quot;shanghai&quot;&gt;&lt;/el-option&gt;&#10;      &lt;el-option label=&quot;区域二&quot; value=&quot;beijing&quot;&gt;&lt;/el-option&gt;&#10;    &lt;/el-select&gt;&#10;  &lt;/el-form-item&gt;&lt;el-form-item&gt;&#10;    &lt;el-button type=&quot;primary&quot; @click=&quot;onSubmit&quot;&gt;查询&lt;/el-button&gt;&#10;  &lt;/el-form-item&gt;&#10;&lt;/el-form&gt;" description="行内表单一行" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-form-withcheck" value="&lt;el-form :model=&quot;ruleForm&quot; :rules=&quot;rules&quot; ref=&quot;ruleForm&quot; label-width=&quot;100px&quot; class=&quot;demo-ruleForm&quot;&gt;&#10;  &lt;el-form-item label=&quot;活动名称&quot; prop=&quot;name&quot;&gt;&#10;    &lt;el-input v-model=&quot;ruleForm.name&quot;&gt;&lt;/el-input&gt;&#10;  &lt;/el-form-item&gt;&#10;  &lt;el-form-item label=&quot;活动区域&quot; prop=&quot;region&quot;&gt;&#10;    &lt;el-select v-model=&quot;ruleForm.region&quot; placeholder=&quot;请选择活动区域&quot;&gt;&#10;      &lt;el-option label=&quot;区域一&quot; value=&quot;shanghai&quot;&gt;&lt;/el-option&gt;&#10;      &lt;el-option label=&quot;区域二&quot; value=&quot;beijing&quot;&gt;&lt;/el-option&gt;&#10;    &lt;/el-select&gt;&#10;  &lt;/el-form-item&gt;&#10;  &lt;el-form-item label=&quot;活动时间&quot; required&gt;&#10;    &lt;el-col :span=&quot;11&quot;&gt;&#10;      &lt;el-form-item prop=&quot;date1&quot;&gt;&#10;        &lt;el-date-picker type=&quot;date&quot; placeholder=&quot;选择日期&quot; v-model=&quot;ruleForm.date1&quot; style=&quot;width: 100%;&quot;&gt;&lt;/el-date-picker&gt;&#10;      &lt;/el-form-item&gt;&#10;    &lt;/el-col&gt;&#10;    &lt;el-col class=&quot;line&quot; :span=&quot;2&quot;&gt;-&lt;/el-col&gt;&#10;    &lt;el-col :span=&quot;11&quot;&gt;&#10;      &lt;el-form-item prop=&quot;date2&quot;&gt;&#10;        &lt;el-time-picker type=&quot;fixed-time&quot; placeholder=&quot;选择时间&quot; v-model=&quot;ruleForm.date2&quot; style=&quot;width: 100%;&quot;&gt;&lt;/el-time-picker&gt;&#10;      &lt;/el-form-item&gt;&#10;    &lt;/el-col&gt;&#10;  &lt;/el-form-item&gt;&#10;  &lt;el-form-item label=&quot;即时配送&quot; prop=&quot;delivery&quot;&gt;&#10;    &lt;el-switch on-text=&quot;&quot; off-text=&quot;&quot; v-model=&quot;ruleForm.delivery&quot;&gt;&lt;/el-switch&gt;&#10;  &lt;/el-form-item&gt;&#10;  &lt;el-form-item label=&quot;活动性质&quot; prop=&quot;type&quot;&gt;&#10;    &lt;el-checkbox-group v-model=&quot;ruleForm.type&quot;&gt;&#10;      &lt;el-checkbox label=&quot;美食/餐厅线上活动&quot; name=&quot;type&quot;&gt;&lt;/el-checkbox&gt;&#10;      &lt;el-checkbox label=&quot;地推活动&quot; name=&quot;type&quot;&gt;&lt;/el-checkbox&gt;&#10;      &lt;el-checkbox label=&quot;线下主题活动&quot; name=&quot;type&quot;&gt;&lt;/el-checkbox&gt;&#10;      &lt;el-checkbox label=&quot;单纯品牌曝光&quot; name=&quot;type&quot;&gt;&lt;/el-checkbox&gt;&#10;    &lt;/el-checkbox-group&gt;&#10;  &lt;/el-form-item&gt;&#10;  &lt;el-form-item label=&quot;特殊资源&quot; prop=&quot;resource&quot;&gt;&#10;    &lt;el-radio-group v-model=&quot;ruleForm.resource&quot;&gt;&#10;      &lt;el-radio label=&quot;线上品牌商赞助&quot;&gt;&lt;/el-radio&gt;&#10;      &lt;el-radio label=&quot;线下场地免费&quot;&gt;&lt;/el-radio&gt;&#10;    &lt;/el-radio-group&gt;&#10;  &lt;/el-form-item&gt;&#10;  &lt;el-form-item label=&quot;活动形式&quot; prop=&quot;desc&quot;&gt;&#10;    &lt;el-input type=&quot;textarea&quot; v-model=&quot;ruleForm.desc&quot;&gt;&lt;/el-input&gt;&#10;  &lt;/el-form-item&gt;&#10;  &lt;el-form-item&gt;&#10;    &lt;el-button type=&quot;primary&quot; @click=&quot;submitForm('ruleForm')&quot;&gt;立即创建&lt;/el-button&gt;&#10;    &lt;el-button @click=&quot;resetForm('ruleForm')&quot;&gt;重置&lt;/el-button&gt;&#10;  &lt;/el-form-item&gt;&#10;&lt;/el-form&gt;&#10;&lt;script&gt;&#10;  export default {&#10;    data() {&#10;      return {&#10;        ruleForm: {&#10;          name: '',&#10;          region: '',&#10;          date1: '',&#10;          date2: '',&#10;          delivery: false,&#10;          type: [],&#10;          resource: '',&#10;          desc: ''&#10;        },&#10;        rules: {&#10;          name: [&#10;            { required: true, message: '请输入活动名称', trigger: 'blur' },&#10;            { min: 3, max: 5, message: '长度在 3 到 5 个字符', trigger: 'blur' }&#10;          ],&#10;          region: [&#10;            { required: true, message: '请选择活动区域', trigger: 'change' }&#10;          ],&#10;          date1: [&#10;            { type: 'date', required: true, message: '请选择日期', trigger: 'change' }&#10;          ],&#10;          date2: [&#10;            { type: 'date', required: true, message: '请选择时间', trigger: 'change' }&#10;          ],&#10;          type: [&#10;            { type: 'array', required: true, message: '请至少选择一个活动性质', trigger: 'change' }&#10;          ],&#10;          resource: [&#10;            { required: true, message: '请选择活动资源', trigger: 'change' }&#10;          ],&#10;          desc: [&#10;            { required: true, message: '请填写活动形式', trigger: 'blur' }&#10;          ]&#10;        }&#10;      };&#10;    },&#10;    methods: {&#10;      submitForm(formName) {&#10;        this.$refs[formName].validate((valid) =&gt; {&#10;          if (valid) {&#10;            alert('submit!');&#10;          } else {&#10;            console.log('error submit!!');&#10;            return false;&#10;          }&#10;        });&#10;      },&#10;      resetForm(formName) {&#10;        this.$refs[formName].resetFields();&#10;      }&#10;    }&#10;  }&#10;&lt;/script&gt;" description="带验证的表单" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-form-check-custom" value="&lt;el-form :model=&quot;ruleForm2&quot; :rules=&quot;rules2&quot; ref=&quot;ruleForm2&quot; label-width=&quot;100px&quot; class=&quot;demo-ruleForm&quot;&gt;&#10;  &lt;el-form-item label=&quot;密码&quot; prop=&quot;pass&quot;&gt;&#10;    &lt;el-input type=&quot;password&quot; v-model=&quot;ruleForm2.pass&quot; auto-complete=&quot;off&quot;&gt;&lt;/el-input&gt;&#10;  &lt;/el-form-item&gt;&#10;  &lt;el-form-item label=&quot;确认密码&quot; prop=&quot;checkPass&quot;&gt;&#10;    &lt;el-input type=&quot;password&quot; v-model=&quot;ruleForm2.checkPass&quot; auto-complete=&quot;off&quot;&gt;&lt;/el-input&gt;&#10;  &lt;/el-form-item&gt;&#10;  &lt;el-form-item label=&quot;年龄&quot; prop=&quot;age&quot;&gt;&#10;    &lt;el-input v-model.number=&quot;ruleForm2.age&quot;&gt;&lt;/el-input&gt;&#10;  &lt;/el-form-item&gt;&#10;  &lt;el-form-item&gt;&#10;    &lt;el-button type=&quot;primary&quot; @click=&quot;submitForm('ruleForm2')&quot;&gt;提交&lt;/el-button&gt;&#10;    &lt;el-button @click=&quot;resetForm('ruleForm2')&quot;&gt;重置&lt;/el-button&gt;&#10;  &lt;/el-form-item&gt;&#10;&lt;/el-form&gt;&#10;&lt;script&gt;&#10;  export default {&#10;    data() {&#10;      var checkAge = (rule, value, callback) =&gt; {&#10;        if (!value) {&#10;          return callback(new Error('年龄不能为空'));&#10;        }&#10;        setTimeout(() =&gt; {&#10;          if (!Number.isInteger(value)) {&#10;            callback(new Error('请输入数字值'));&#10;          } else {&#10;            if (value &lt; 18) {&#10;              callback(new Error('必须年满18岁'));&#10;            } else {&#10;              callback();&#10;            }&#10;          }&#10;        }, 1000);&#10;      };&#10;      var validatePass = (rule, value, callback) =&gt; {&#10;        if (value === '') {&#10;          callback(new Error('请输入密码'));&#10;        } else {&#10;          if (this.ruleForm2.checkPass !== '') {&#10;            this.$refs.ruleForm2.validateField('checkPass');&#10;          }&#10;          callback();&#10;        }&#10;      };&#10;      var validatePass2 = (rule, value, callback) =&gt; {&#10;        if (value === '') {&#10;          callback(new Error('请再次输入密码'));&#10;        } else if (value !== this.ruleForm2.pass) {&#10;          callback(new Error('两次输入密码不一致!'));&#10;        } else {&#10;          callback();&#10;        }&#10;      };&#10;      return {&#10;        ruleForm2: {&#10;          pass: '',&#10;          checkPass: '',&#10;          age: ''&#10;        },&#10;        rules2: {&#10;          pass: [&#10;            { validator: validatePass, trigger: 'blur' }&#10;          ],&#10;          checkPass: [&#10;            { validator: validatePass2, trigger: 'blur' }&#10;          ],&#10;          age: [&#10;            { validator: checkAge, trigger: 'blur' }&#10;          ]&#10;        }&#10;      };&#10;    },&#10;    methods: {&#10;      submitForm(formName) {&#10;        this.$refs[formName].validate((valid) =&gt; {&#10;          if (valid) {&#10;            alert('submit!');&#10;          } else {&#10;            console.log('error submit!!');&#10;            return false;&#10;          }&#10;        });&#10;      },&#10;      resetForm(formName) {&#10;        this.$refs[formName].resetFields();&#10;      }&#10;    }&#10;  }&#10;&lt;/script&gt;" description="自定义验证表单" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-form-number-check" value="&lt;el-form :model=&quot;numberValidateForm&quot; ref=&quot;numberValidateForm&quot; label-width=&quot;100px&quot; class=&quot;demo-ruleForm&quot;&gt;&#10;  &lt;el-form-item&#10;    label=&quot;年龄&quot;&#10;    prop=&quot;age&quot;&#10;    :rules=&quot;[&#10;      { required: true, message: '年龄不能为空'},&#10;      { type: 'number', message: '年龄必须为数字值'}&#10;    ]&quot;&#10;  &gt;&#10;    &lt;el-input type=&quot;age&quot; v-model.number=&quot;numberValidateForm.age&quot; auto-complete=&quot;off&quot;&gt;&lt;/el-input&gt;&#10;  &lt;/el-form-item&gt;&#10;  &lt;el-form-item&gt;&#10;    &lt;el-button type=&quot;primary&quot; @click=&quot;submitForm('numberValidateForm')&quot;&gt;提交&lt;/el-button&gt;&#10;    &lt;el-button @click=&quot;resetForm('numberValidateForm')&quot;&gt;重置&lt;/el-button&gt;&#10;  &lt;/el-form-item&gt;&#10;&lt;/el-form&gt;&#10;&lt;script&gt;&#10;  export default {&#10;    data() {&#10;      return {&#10;        numberValidateForm: {&#10;          age: ''&#10;        }&#10;      };&#10;    },&#10;    methods: {&#10;      submitForm(formName) {&#10;        this.$refs[formName].validate((valid) =&gt; {&#10;          if (valid) {&#10;            alert('submit!');&#10;          } else {&#10;            console.log('error submit!!');&#10;            return false;&#10;          }&#10;        });&#10;      },&#10;      resetForm(formName) {&#10;        this.$refs[formName].resetFields();&#10;      }&#10;    }&#10;  }&#10;&lt;/script&gt;" description="数字类型验证表单" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-table" value="    &lt;el-table&#10;      :data=&quot;tableData&quot;&#10;      stripe=&quot;$是否显示斑马线$&quot;&#10;      style=&quot;width: 100%&quot;&gt;&#10;      &lt;el-table-column&#10;        prop=&quot;date&quot;&#10;        label=&quot;日期&quot;&#10;        width=&quot;180&quot;&gt;&#10;      &lt;/el-table-column&gt;&#10;      &lt;el-table-column&#10;        prop=&quot;name&quot;&#10;        label=&quot;姓名&quot;&#10;        width=&quot;180&quot;&gt;&#10;      &lt;/el-table-column&gt;&#10;      &lt;el-table-column&#10;        prop=&quot;address&quot;&#10;        label=&quot;地址&quot;&gt;&#10;      &lt;/el-table-column&gt;&#10;    &lt;/el-table&gt;" description="表格" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-table-border" value="  &lt;el-table&#10;    :data=&quot;tableData&quot;&#10;    border&#10;    style=&quot;width: 100%&quot;&gt;&#10;    &lt;el-table-column&#10;      prop=&quot;date&quot;&#10;      label=&quot;日期&quot;&#10;      width=&quot;180&quot;&gt;&#10;    &lt;/el-table-column&gt;&#10;    &lt;el-table-column&#10;      prop=&quot;name&quot;&#10;      label=&quot;姓名&quot;&#10;      width=&quot;180&quot;&gt;&#10;    &lt;/el-table-column&gt;&#10;    &lt;el-table-column&#10;      prop=&quot;address&quot;&#10;      label=&quot;地址&quot;&gt;&#10;    &lt;/el-table-column&gt;&#10;  &lt;/el-table&gt;" description="表格带边框" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-table-status" value="&lt;el-table&#10;    :data=&quot;tableData2&quot;&#10;    style=&quot;width: 100%&quot;&#10;    :row-class-name=&quot;tableRowClassName&quot;&gt;&#10;    &lt;el-table-column&#10;      prop=&quot;date&quot;&#10;      label=&quot;日期&quot;&#10;      width=&quot;180&quot;&gt;&#10;    &lt;/el-table-column&gt;&#10;    &lt;el-table-column&#10;      prop=&quot;name&quot;&#10;      label=&quot;姓名&quot;&#10;      width=&quot;180&quot;&gt;&#10;    &lt;/el-table-column&gt;&#10;    &lt;el-table-column&#10;      prop=&quot;address&quot;&#10;      label=&quot;地址&quot;&gt;&#10;    &lt;/el-table-column&gt;&#10;  &lt;/el-table&gt;&#10;  &#10;   methods: {&#10;      tableRowClassName(row, index) {&#10;        if (index === 1) {&#10;          return 'info-row';&#10;        } else if (index === 3) {&#10;          return 'positive-row';&#10;        }&#10;        return '';&#10;      }&#10;    }," description="表格带状态（样式" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-table-fix" value=" &lt;el-table&#10;    :data=&quot;tableData3&quot;&#10;    height=&quot;250&quot;&#10;    border&#10;    style=&quot;width: 100%&quot;&gt;&#10;    &lt;el-table-column&#10;      prop=&quot;date&quot;&#10;      label=&quot;日期&quot;&#10;      width=&quot;180&quot;&gt;&#10;    &lt;/el-table-column&gt;&#10;    &lt;el-table-column&#10;      prop=&quot;name&quot;&#10;      label=&quot;姓名&quot;&#10;      width=&quot;180&quot;&gt;&#10;    &lt;/el-table-column&gt;&#10;    &lt;el-table-column&#10;      prop=&quot;address&quot;&#10;      label=&quot;地址&quot;&gt;&#10;    &lt;/el-table-column&gt;&#10;  &lt;/el-table&gt;" description="表格（固定表头" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-table-fixcolumn" value="&lt;el-table&#10;    :data=&quot;tableData&quot;&#10;    border&#10;    style=&quot;width: 100%&quot;&gt;&#10;    &lt;el-table-column&#10;      fixed&#10;      prop=&quot;date&quot;&#10;      label=&quot;日期&quot;&#10;      width=&quot;150&quot;&gt;&#10;    &lt;/el-table-column&gt;&#10;    &lt;el-table-column&#10;      prop=&quot;name&quot;&#10;      label=&quot;姓名&quot;&#10;      width=&quot;120&quot;&gt;&#10;    &lt;/el-table-column&gt;&#10;    &lt;el-table-column&#10;      prop=&quot;province&quot;&#10;      label=&quot;省份&quot;&#10;      width=&quot;120&quot;&gt;&#10;    &lt;/el-table-column&gt;&#10;    &lt;el-table-column&#10;      prop=&quot;city&quot;&#10;      label=&quot;市区&quot;&#10;      width=&quot;120&quot;&gt;&#10;    &lt;/el-table-column&gt;&#10;    &lt;el-table-column&#10;      prop=&quot;address&quot;&#10;      label=&quot;地址&quot;&#10;      width=&quot;300&quot;&gt;&#10;    &lt;/el-table-column&gt;&#10;    &lt;el-table-column&#10;      prop=&quot;zip&quot;&#10;      label=&quot;邮编&quot;&#10;      width=&quot;120&quot;&gt;&#10;    &lt;/el-table-column&gt;&#10;    &lt;el-table-column&#10;      fixed=&quot;right&quot;&#10;      label=&quot;操作&quot;&#10;      width=&quot;100&quot;&gt;&#10;      &lt;template scope=&quot;scope&quot;&gt;&#10;        &lt;el-button @click=&quot;handleClick&quot; type=&quot;text&quot; size=&quot;small&quot;&gt;查看&lt;/el-button&gt;&#10;        &lt;el-button type=&quot;text&quot; size=&quot;small&quot;&gt;编辑&lt;/el-button&gt;&#10;      &lt;/template&gt;&#10;    &lt;/el-table-column&gt;&#10;  &lt;/el-table&gt;" description="表格（固定列" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-table-multipleheader" value=" &lt;el-table&#10;    :data=&quot;tableData3&quot;&#10;    border&#10;    style=&quot;width: 100%&quot;&gt;&#10;    &lt;el-table-column&#10;      prop=&quot;date&quot;&#10;      label=&quot;日期&quot;&#10;      width=&quot;150&quot;&gt;&#10;    &lt;/el-table-column&gt;&#10;    &lt;el-table-column label=&quot;配送信息&quot;&gt;&#10;      &lt;el-table-column&#10;        prop=&quot;name&quot;&#10;        label=&quot;姓名&quot;&#10;        width=&quot;120&quot;&gt;&#10;      &lt;/el-table-column&gt;&#10;      &lt;el-table-column label=&quot;地址&quot;&gt;&#10;        &lt;el-table-column&#10;          prop=&quot;province&quot;&#10;          label=&quot;省份&quot;&#10;          width=&quot;120&quot;&gt;&#10;        &lt;/el-table-column&gt;&#10;        &lt;el-table-column&#10;          prop=&quot;city&quot;&#10;          label=&quot;市区&quot;&#10;          width=&quot;120&quot;&gt;&#10;        &lt;/el-table-column&gt;&#10;        &lt;el-table-column&#10;          prop=&quot;address&quot;&#10;          label=&quot;地址&quot;&#10;          width=&quot;300&quot;&gt;&#10;        &lt;/el-table-column&gt;&#10;        &lt;el-table-column&#10;          prop=&quot;zip&quot;&#10;          label=&quot;邮编&quot;&#10;          width=&quot;120&quot;&gt;&#10;        &lt;/el-table-column&gt;&#10;      &lt;/el-table-column&gt;&#10;    &lt;/el-table-column&gt;&#10;  &lt;/el-table&gt;" description="表格（多级表头" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-table-radio" value="&lt;el-table&#10;    :data=&quot;tableData&quot;&#10;    highlight-current-row&#10;    @current-change=&quot;handleCurrentChange&quot;&#10;    style=&quot;width: 100%&quot;&gt;&#10;    &lt;el-table-column&#10;      type=&quot;index&quot;&#10;      width=&quot;50&quot;&gt;&#10;    &lt;/el-table-column&gt;&#10;    &lt;el-table-column&#10;      property=&quot;date&quot;&#10;      label=&quot;日期&quot;&#10;      width=&quot;120&quot;&gt;&#10;    &lt;/el-table-column&gt;&#10;    &lt;el-table-column&#10;      property=&quot;name&quot;&#10;      label=&quot;姓名&quot;&#10;      width=&quot;120&quot;&gt;&#10;    &lt;/el-table-column&gt;&#10;    &lt;el-table-column&#10;      property=&quot;address&quot;&#10;      label=&quot;地址&quot;&gt;&#10;    &lt;/el-table-column&gt;&#10;  &lt;/el-table&gt;" description="表格（单选" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-table-checkbox" value=" &lt;el-table&#10;    :data=&quot;tableData3&quot;&#10;    border&#10;    style=&quot;width: 100%&quot;&#10;    @selection-change=&quot;handleSelectionChange&quot;&gt;&#10;    &lt;el-table-column&#10;      type=&quot;selection&quot;&#10;      width=&quot;55&quot;&gt;&#10;    &lt;/el-table-column&gt;&#10;    &lt;el-table-column&#10;      label=&quot;日期&quot;&#10;      width=&quot;120&quot;&gt;&#10;      &lt;template scope=&quot;scope&quot;&gt;{{ scope.row.date }}&lt;/template&gt;&#10;    &lt;/el-table-column&gt;&#10;    &lt;el-table-column&#10;      prop=&quot;name&quot;&#10;      label=&quot;姓名&quot;&#10;      width=&quot;120&quot;&gt;&#10;    &lt;/el-table-column&gt;&#10;    &lt;el-table-column&#10;      prop=&quot;address&quot;&#10;      label=&quot;地址&quot;&#10;      show-overflow-tooltip&gt;&#10;    &lt;/el-table-column&gt;&#10;  &lt;/el-table&gt;" description="表格（多选" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-table-sort" value=" &lt;el-table&#10;    :data=&quot;tableData&quot;&#10;    border&#10;    style=&quot;width: 100%&quot;&#10;    :default-sort = &quot;{prop: 'date', order: 'descending'}&quot;&#10;    &gt;&#10;    &lt;el-table-column&#10;      prop=&quot;date&quot;&#10;      label=&quot;日期&quot;&#10;      sortable&#10;      width=&quot;180&quot;&gt;&#10;    &lt;/el-table-column&gt;&#10;    &lt;el-table-column&#10;      prop=&quot;name&quot;&#10;      label=&quot;姓名&quot;&#10;      sortable&#10;      width=&quot;180&quot;&gt;&#10;    &lt;/el-table-column&gt;&#10;    &lt;el-table-column&#10;      prop=&quot;address&quot;&#10;      label=&quot;地址&quot;&#10;      :formatter=&quot;formatter&quot;&gt;&#10;    &lt;/el-table-column&gt;&#10;  &lt;/el-table&gt;&#10;  &#10;        formatter(row, column) {&#10;        return row.address;&#10;      }&#10;" description="表格(排序" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-table-filter" value="&lt;el-table&#10;    :data=&quot;tableData&quot;&#10;    border&#10;    style=&quot;width: 100%&quot;&gt;&#10;    &lt;el-table-column&#10;      prop=&quot;date&quot;&#10;      label=&quot;日期&quot;&#10;      sortable&#10;      width=&quot;180&quot;&gt;&#10;    &lt;/el-table-column&gt;&#10;    &lt;el-table-column&#10;      prop=&quot;name&quot;&#10;      label=&quot;姓名&quot;&#10;      width=&quot;180&quot;&gt;&#10;    &lt;/el-table-column&gt;&#10;    &lt;el-table-column&#10;      prop=&quot;address&quot;&#10;      label=&quot;地址&quot;&#10;      :formatter=&quot;formatter&quot;&gt;&#10;    &lt;/el-table-column&gt;&#10;    &lt;el-table-column&#10;      prop=&quot;tag&quot;&#10;      label=&quot;标签&quot;&#10;      width=&quot;100&quot;&#10;      :filters=&quot;[{ text: '家', value: '家' }, { text: '公司', value: '公司' }]&quot;&#10;      :filter-method=&quot;filterTag&quot;&gt;&#10;      &lt;template scope=&quot;scope&quot;&gt;&#10;        &lt;el-tag&#10;          :type=&quot;scope.row.tag === '家' ? 'primary' : 'success'&quot;&#10;          close-transition&gt;{{scope.row.tag}}&lt;/el-tag&gt;&#10;      &lt;/template&gt;&#10;    &lt;/el-table-column&gt;&#10;  &lt;/el-table&gt;&#10;  &#10;   formatter(row, column) {&#10;        return row.address;&#10;      },&#10;      filterTag(value, row) {&#10;        return row.tag === value;&#10;      }" description="表格(筛选" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-table-custom" value="&lt;el-table&#10;    :data=&quot;tableData&quot;&#10;    border&#10;    style=&quot;width: 100%&quot;&gt;&#10;    &lt;el-table-column&#10;      label=&quot;日期&quot;&#10;      width=&quot;180&quot;&gt;&#10;      &lt;template scope=&quot;scope&quot;&gt;&#10;        &lt;el-icon name=&quot;time&quot;&gt;&lt;/el-icon&gt;&#10;        &lt;span style=&quot;margin-left: 10px&quot;&gt;{{ scope.row.date }}&lt;/span&gt;&#10;      &lt;/template&gt;&#10;    &lt;/el-table-column&gt;&#10;    &lt;el-table-column&#10;      label=&quot;姓名&quot;&#10;      width=&quot;180&quot;&gt;&#10;      &lt;template scope=&quot;scope&quot;&gt;&#10;        &lt;el-popover trigger=&quot;hover&quot; placement=&quot;top&quot;&gt;&#10;          &lt;p&gt;姓名: {{ scope.row.name }}&lt;/p&gt;&#10;          &lt;p&gt;住址: {{ scope.row.address }}&lt;/p&gt;&#10;          &lt;div slot=&quot;reference&quot; class=&quot;name-wrapper&quot;&gt;&#10;            &lt;el-tag&gt;{{ scope.row.name }}&lt;/el-tag&gt;&#10;          &lt;/div&gt;&#10;        &lt;/el-popover&gt;&#10;      &lt;/template&gt;&#10;    &lt;/el-table-column&gt;&#10;    &lt;el-table-column label=&quot;操作&quot;&gt;&#10;      &lt;template scope=&quot;scope&quot;&gt;&#10;        &lt;el-button&#10;          size=&quot;small&quot;&#10;          @click=&quot;handleEdit(scope.$index, scope.row)&quot;&gt;编辑&lt;/el-button&gt;&#10;        &lt;el-button&#10;          size=&quot;small&quot;&#10;          type=&quot;danger&quot;&#10;          @click=&quot;handleDelete(scope.$index, scope.row)&quot;&gt;删除&lt;/el-button&gt;&#10;      &lt;/template&gt;&#10;    &lt;/el-table-column&gt;&#10;  &lt;/el-table&gt;" description="表格(自定义模板" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-table-unfold" value="  &lt;el-table&#10;    :data=&quot;tableData5&quot;&#10;    style=&quot;width: 100%&quot;&gt;&#10;    &lt;el-table-column type=&quot;expand&quot;&gt;&#10;      &lt;template scope=&quot;props&quot;&gt;&#10;        &lt;el-form label-position=&quot;left&quot; inline class=&quot;demo-table-expand&quot;&gt;&#10;          &lt;el-form-item label=&quot;商品名称&quot;&gt;&#10;            &lt;span&gt;{{ props.row.name }}&lt;/span&gt;&#10;          &lt;/el-form-item&gt;&#10;          &lt;el-form-item label=&quot;所属店铺&quot;&gt;&#10;            &lt;span&gt;{{ props.row.shop }}&lt;/span&gt;&#10;          &lt;/el-form-item&gt;&#10;          &lt;el-form-item label=&quot;商品 ID&quot;&gt;&#10;            &lt;span&gt;{{ props.row.id }}&lt;/span&gt;&#10;          &lt;/el-form-item&gt;&#10;          &lt;el-form-item label=&quot;店铺 ID&quot;&gt;&#10;            &lt;span&gt;{{ props.row.shopId }}&lt;/span&gt;&#10;          &lt;/el-form-item&gt;&#10;          &lt;el-form-item label=&quot;商品分类&quot;&gt;&#10;            &lt;span&gt;{{ props.row.category }}&lt;/span&gt;&#10;          &lt;/el-form-item&gt;&#10;          &lt;el-form-item label=&quot;店铺地址&quot;&gt;&#10;            &lt;span&gt;{{ props.row.address }}&lt;/span&gt;&#10;          &lt;/el-form-item&gt;&#10;          &lt;el-form-item label=&quot;商品描述&quot;&gt;&#10;            &lt;span&gt;{{ props.row.desc }}&lt;/span&gt;&#10;          &lt;/el-form-item&gt;&#10;        &lt;/el-form&gt;&#10;      &lt;/template&gt;&#10;    &lt;/el-table-column&gt;&#10;    &lt;el-table-column&#10;      label=&quot;商品 ID&quot;&#10;      prop=&quot;id&quot;&gt;&#10;    &lt;/el-table-column&gt;&#10;    &lt;el-table-column&#10;      label=&quot;商品名称&quot;&#10;      prop=&quot;name&quot;&gt;&#10;    &lt;/el-table-column&gt;&#10;    &lt;el-table-column&#10;      label=&quot;描述&quot;&#10;      prop=&quot;desc&quot;&gt;&#10;    &lt;/el-table-column&gt;&#10;  &lt;/el-table&gt;" description="表格(展开" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-progress" value="&lt;el-progress :percentage=&quot;100$A$&quot; status=&quot;success/exception&quot; text-inside=&quot;$描述是否在进度条内部$&quot; stroke-width=&quot;$进度条宽度$&quot; type=&quot;$可选圆形$circle&quot;&gt;&lt;/el-progress&gt;" description="进度条" toReformat="true" toShortenFQNames="true">
+    <variable name="A" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-pagination" value="    &lt;el-pagination&#10;      layout=&quot;prev, pager, next&quot;&#10;      :total=&quot;1000&quot;&gt;&#10;    &lt;/el-pagination&gt;" description="分页" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-pagination-small" value="    &lt;el-pagination&#10;      small&#10;      layout=&quot;prev, pager, next&quot;&#10;      :total=&quot;1000&quot;&gt;&#10;    &lt;/el-pagination&gt;" description="分页" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-pagination-all" value="    &lt;el-pagination&#10;      @size-change=&quot;handleSizeChange&quot;&#10;      @current-change=&quot;handleCurrentChange&quot;&#10;      :current-page=&quot;currentPage4&quot;&#10;      :page-sizes=&quot;[100, 200, 300, 400]&quot;&#10;      :page-size=&quot;100&quot;&#10;      layout=&quot;total, sizes, prev, pager, next, jumper&quot;&#10;      :total=&quot;400&quot;&gt;&#10;    &lt;/el-pagination&gt;" description="分页（完整功能" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-alert-success" value="  &lt;el-alert&#10;    title=&quot;成功提示的文案&quot;&#10;    type=&quot;success&quot;&gt;&#10;  &lt;/el-alert&gt;" description="警告" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-alert-warning" value="  &lt;el-alert&#10;    title=&quot;成功提示的文案&quot;&#10;    type=&quot;warning&quot;&gt;&#10;  &lt;/el-alert&gt;" description="警告提示" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-alert" value="  &lt;el-alert&#10;    title=&quot;$TEXT$&quot;&#10;    type=&quot;info/error&quot;&#10;    :closable=&quot;$是否可关闭$&quot;&#10;    close-text=&quot;$代替关闭图标$&quot;&#10;     @close=&quot;$设置回调$&quot;&#10;     show-icon=&quot;$是否显示图标$&quot;&#10;     description=&quot;$辅助性文字$&quot;&#10;    &gt;&#10;  &lt;/el-alert&gt;" description="警告" toReformat="true" toShortenFQNames="true">
+    <variable name="TEXT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-loading-area" value=" v-loading.body=&quot;loading&quot;" description="加载中命令directive*（区域加载" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-loading-text" value=" v-loading=&quot;loading2&quot;&#10; element-loading-text=&quot;拼命加载中&quot;" description="加载中命令directive*（加载文字" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-loading-fullscreen" value="v-loading.fullscreen.lock=&quot;fullscreenLoading&quot;" description="加载中命令directive*（整页加载" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-message" value="this.$message('$TEXT$');" description="消息提示方法" toReformat="true" toShortenFQNames="true">
+    <variable name="TEXT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-message-all" value="this.$message({&#10;    message: '消息',&#10;    type: 'success/warning/error/info',&#10;    iconClass: '图标类名',&#10;    customClass: '自定义类名',&#10;    duration: '持续时间',&#10;    showClose: 'false',&#10;    onClose: '关闭回调'&#10;});" description="消息提示方法（所有参数" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-messagebox" value="this.$alert('这是一段内容', '标题名称', {&#10;          confirmButtonText: '确定',&#10;          callback: action =&gt; {&#10;            this.$message({&#10;              type: 'info',&#10;              message: `action: ${ action }`&#10;            });&#10;          }&#10;});" description="消息提示，模拟系统弹窗" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-confirm" value="this.$confirm('此操作将永久删除该文件, 是否继续?', '提示', {&#10;          confirmButtonText: '确定',&#10;          cancelButtonText: '取消',&#10;          type: 'warning'&#10;        }).then(() =&gt; {&#10;          this.$message({&#10;            type: 'success',&#10;            message: '删除成功!'&#10;          });&#10;        }).catch(() =&gt; {&#10;          this.$message({&#10;            type: 'info',&#10;            message: '已取消删除'&#10;          });          &#10;        });" description="消息提示，确认弹窗" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-prompt" value="this.$prompt('请输入邮箱', '提示', {&#10;          confirmButtonText: '确定',&#10;          cancelButtonText: '取消',&#10;          inputPattern: /[\w!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[\w!#$%&amp;'*+/=?^_`{|}~-]+)*@(?:[\w](?:[\w-]*[\w])?\.)+[\w](?:[\w-]*[\w])?/,&#10;          inputErrorMessage: '邮箱格式不正确'&#10;        }).then(({ value }) =&gt; {&#10;          this.$message({&#10;            type: 'success',&#10;            message: '你的邮箱是: ' + value&#10;          });&#10;        }).catch(() =&gt; {&#10;          this.$message({&#10;            type: 'info',&#10;            message: '取消输入'&#10;          });       &#10;        });" description="提交内容弹窗" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-msgbox-custom" value="this.$msgbox({&#10;          title: '消息',&#10;          message: '这是一段内容, 这是一段内容, 这是一段内容, 这是一段内容, 这是一段内容, 这是一段内容, 这是一段内容',&#10;          showCancelButton: true,&#10;          confirmButtonText: '确定',&#10;          cancelButtonText: '取消',&#10;          beforeClose: (action, instance, done) =&gt; {&#10;            if (action === 'confirm') {&#10;              instance.confirmButtonLoading = true;&#10;              instance.confirmButtonText = '执行中...';&#10;              setTimeout(() =&gt; {&#10;                done();&#10;                setTimeout(() =&gt; {&#10;                  instance.confirmButtonLoading = false;&#10;                }, 300);&#10;              }, 3000);&#10;            } else {&#10;              done();&#10;            }&#10;          }&#10;        }).then(action =&gt; {&#10;          this.$message({&#10;            type: 'info',&#10;            message: 'action: ' + action&#10;          });&#10;        });" description="自定义内容弹窗" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-notify" value="        this.$notify({&#10;          title: '$TITLE$',&#10;          message: '$CONTENT$',&#10;          duration: $DURATION$，&#10;          type: '$success/warning/error/info$'&#10;          offset: '$偏移量100$'&#10;        });&#10;        $END$" description="通知弹窗" toReformat="true" toShortenFQNames="true">
+    <variable name="TITLE" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CONTENT" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DURATION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-navmenu-dark" value="&lt;el-menu theme=&quot;dark&quot; :default-active=&quot;activeIndex&quot; class=&quot;el-menu-demo&quot; mode=&quot;horizontal&quot; @select=&quot;handleSelect&quot;&gt;&#10;  &lt;el-menu-item index=&quot;1&quot;&gt;处理中心&lt;/el-menu-item&gt;&#10;  &lt;el-submenu index=&quot;2&quot;&gt;&#10;    &lt;template slot=&quot;title&quot;&gt;我的工作台&lt;/template&gt;&#10;    &lt;el-menu-item index=&quot;2-1&quot;&gt;选项1&lt;/el-menu-item&gt;&#10;    &lt;el-menu-item index=&quot;2-2&quot;&gt;选项2&lt;/el-menu-item&gt;&#10;    &lt;el-menu-item index=&quot;2-3&quot;&gt;选项3&lt;/el-menu-item&gt;&#10;  &lt;/el-submenu&gt;&#10;  &lt;el-menu-item index=&quot;3&quot;&gt;&lt;a href=&quot;https://www.ele.me&quot; target=&quot;_blank&quot;&gt;订单管理&lt;/a&gt;&lt;/el-menu-item&gt;&#10;&lt;/el-menu&gt;" description="深色顶栏" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-navmenu" value="&lt;el-menu :default-active=&quot;activeIndex2&quot; class=&quot;el-menu-demo&quot; mode=&quot;horizontal&quot; @select=&quot;handleSelect&quot;&gt;&#10;  &lt;el-menu-item index=&quot;1&quot;&gt;处理中心&lt;/el-menu-item&gt;&#10;  &lt;el-submenu index=&quot;2&quot;&gt;&#10;    &lt;template slot=&quot;title&quot;&gt;我的工作台&lt;/template&gt;&#10;    &lt;el-menu-item index=&quot;2-1&quot;&gt;选项1&lt;/el-menu-item&gt;&#10;    &lt;el-menu-item index=&quot;2-2&quot;&gt;选项2&lt;/el-menu-item&gt;&#10;    &lt;el-menu-item index=&quot;2-3&quot;&gt;选项3&lt;/el-menu-item&gt;&#10;  &lt;/el-submenu&gt;&#10;  &lt;el-menu-item index=&quot;3&quot;&gt;&lt;a href=&quot;https://www.ele.me&quot; target=&quot;_blank&quot;&gt;订单管理&lt;/a&gt;&lt;/el-menu-item&gt;&#10;&lt;/el-menu&gt;" description="浅色顶栏" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-sidebar-icon" value=" &lt;el-menu default-active=&quot;2&quot; class=&quot;el-menu-vertical-demo&quot; @open=&quot;handleOpen&quot; @close=&quot;handleClose&quot;&gt;&#10;      &lt;el-submenu index=&quot;1&quot;&gt;&#10;        &lt;template slot=&quot;title&quot;&gt;&lt;i class=&quot;el-icon-message&quot;&gt;&lt;/i&gt;导航一&lt;/template&gt;&#10;        &lt;el-menu-item-group&gt;&#10;          &lt;template slot=&quot;title&quot;&gt;分组一&lt;/template&gt;&#10;          &lt;el-menu-item index=&quot;1-1&quot;&gt;选项1&lt;/el-menu-item&gt;&#10;          &lt;el-menu-item index=&quot;1-2&quot;&gt;选项2&lt;/el-menu-item&gt;&#10;        &lt;/el-menu-item-group&gt;&#10;        &lt;el-menu-item-group title=&quot;分组2&quot;&gt;&#10;          &lt;el-menu-item index=&quot;1-3&quot;&gt;选项3&lt;/el-menu-item&gt;&#10;        &lt;/el-menu-item-group&gt;&#10;        &lt;el-submenu index=&quot;1-4&quot;&gt;&#10;          &lt;template slot=&quot;title&quot;&gt;选项4&lt;/template&gt;&#10;          &lt;el-menu-item index=&quot;1-4-1&quot;&gt;选项1&lt;/el-menu-item&gt;&#10;        &lt;/el-submenu&gt;&#10;      &lt;/el-submenu&gt;&#10;      &lt;el-menu-item index=&quot;2&quot;&gt;&lt;i class=&quot;el-icon-menu&quot;&gt;&lt;/i&gt;导航二&lt;/el-menu-item&gt;&#10;      &lt;el-menu-item index=&quot;3&quot;&gt;&lt;i class=&quot;el-icon-setting&quot;&gt;&lt;/i&gt;导航三&lt;/el-menu-item&gt;&#10;    &lt;/el-menu&gt;" description="侧边栏-带图标" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-sidebar" value="&lt;el-menu default-active=&quot;2&quot; class=&quot;el-menu-vertical-demo&quot; @open=&quot;handleOpen&quot; @close=&quot;handleClose&quot; theme=&quot;dark&quot;&gt;&#10;      &lt;el-submenu index=&quot;1&quot;&gt;&#10;        &lt;template slot=&quot;title&quot;&gt;导航一&lt;/template&gt;&#10;        &lt;el-menu-item-group title=&quot;分组一&quot;&gt;&#10;          &lt;el-menu-item index=&quot;1-1&quot;&gt;选项1&lt;/el-menu-item&gt;&#10;          &lt;el-menu-item index=&quot;1-2&quot;&gt;选项2&lt;/el-menu-item&gt;&#10;        &lt;/el-menu-item-group&gt;&#10;        &lt;el-menu-item-group title=&quot;分组2&quot;&gt;&#10;          &lt;el-menu-item index=&quot;1-3&quot;&gt;选项3&lt;/el-menu-item&gt;&#10;        &lt;/el-menu-item-group&gt;&#10;        &lt;el-submenu index=&quot;1-4&quot;&gt;&#10;          &lt;template slot=&quot;title&quot;&gt;选项4&lt;/template&gt;&#10;          &lt;el-menu-item index=&quot;1-4-1&quot;&gt;选项1&lt;/el-menu-item&gt;&#10;        &lt;/el-submenu&gt;&#10;      &lt;/el-submenu&gt;&#10;      &lt;el-menu-item index=&quot;2&quot;&gt;导航二&lt;/el-menu-item&gt;&#10;      &lt;el-menu-item index=&quot;3&quot;&gt;导航三&lt;/el-menu-item&gt;&#10;    &lt;/el-menu&gt;&#10;    &#10;          handleOpen(key, keyPath) {&#10;        console.log(key, keyPath);&#10;      },&#10;      handleClose(key, keyPath) {&#10;        console.log(key, keyPath);&#10;      }" description="侧边栏" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-sidebar-group" value="    &lt;el-menu mode=&quot;vertical&quot; default-active=&quot;1&quot; class=&quot;el-menu-vertical-demo&quot;&gt;&#10;      &lt;el-menu-item-group title=&quot;分组一&quot;&gt;&#10;        &lt;el-menu-item index=&quot;1&quot;&gt;&lt;i class=&quot;el-icon-message&quot;&gt;&lt;/i&gt;导航一&lt;/el-menu-item&gt;&#10;        &lt;el-menu-item index=&quot;2&quot;&gt;&lt;i class=&quot;el-icon-message&quot;&gt;&lt;/i&gt;导航二&lt;/el-menu-item&gt;&#10;      &lt;/el-menu-item-group&gt;&#10;      &lt;el-menu-item-group title=&quot;分组二&quot;&gt;&#10;        &lt;el-menu-item index=&quot;3&quot;&gt;&lt;i class=&quot;el-icon-message&quot;&gt;&lt;/i&gt;导航三&lt;/el-menu-item&gt;&#10;        &lt;el-menu-item index=&quot;4&quot;&gt;&lt;i class=&quot;el-icon-message&quot;&gt;&lt;/i&gt;导航四&lt;/el-menu-item&gt;&#10;      &lt;/el-menu-item-group&gt;&#10;    &lt;/el-menu&gt;" description="侧边栏(分组" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-tabs" value="  &lt;el-tabs v-model=&quot;activeName&quot; @tab-click=&quot;handleClick&quot;&gt;&#10;    &lt;el-tab-pane label=&quot;用户管理&quot; name=&quot;first&quot;&gt;用户管理&lt;/el-tab-pane&gt;&#10;    &lt;el-tab-pane label=&quot;配置管理&quot; name=&quot;second&quot;&gt;配置管理&lt;/el-tab-pane&gt;&#10;    &lt;el-tab-pane label=&quot;角色管理&quot; name=&quot;third&quot;&gt;角色管理&lt;/el-tab-pane&gt;&#10;    &lt;el-tab-pane label=&quot;定时任务补偿&quot; name=&quot;fourth&quot;&gt;定时任务补偿&lt;/el-tab-pane&gt;&#10;  &lt;/el-tabs&gt;&#10;  &#10;      data() {&#10;      return {&#10;        activeName: 'second'&#10;      };&#10;    },&#10;    methods: {&#10;      handleClick(tab, event) {&#10;        console.log(tab, event);&#10;      }&#10;    }" description="标签页" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-tabs-panel" value="  &lt;el-tabs v-model=&quot;activeName2&quot; type=&quot;card&quot; @tab-click=&quot;handleClick&quot;&gt;&#10;    &lt;el-tab-pane label=&quot;用户管理&quot; name=&quot;first&quot;&gt;用户管理&lt;/el-tab-pane&gt;&#10;    &lt;el-tab-pane label=&quot;配置管理&quot; name=&quot;second&quot;&gt;配置管理&lt;/el-tab-pane&gt;&#10;    &lt;el-tab-pane label=&quot;角色管理&quot; name=&quot;third&quot;&gt;角色管理&lt;/el-tab-pane&gt;&#10;    &lt;el-tab-pane label=&quot;定时任务补偿&quot; name=&quot;fourth&quot;&gt;定时任务补偿&lt;/el-tab-pane&gt;&#10;  &lt;/el-tabs&gt;" description="标签页-选项卡样式" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-tabs-card" value="&lt;el-tabs type=&quot;border-card&quot;&gt;&#10;  &lt;el-tab-pane label=&quot;用户管理&quot;&gt;用户管理&lt;/el-tab-pane&gt;&#10;  &lt;el-tab-pane label=&quot;配置管理&quot;&gt;配置管理&lt;/el-tab-pane&gt;&#10;  &lt;el-tab-pane label=&quot;角色管理&quot;&gt;角色管理&lt;/el-tab-pane&gt;&#10;  &lt;el-tab-pane label=&quot;定时任务补偿&quot;&gt;定时任务补偿&lt;/el-tab-pane&gt;&#10;&lt;/el-tabs&gt;" description="标签页-卡片化" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-tabs-custom" value="&lt;el-tabs type=&quot;border-card&quot;&gt;&#10;  &lt;el-tab-pane&gt;&#10;    &lt;span slot=&quot;label&quot;&gt;&lt;i class=&quot;el-icon-date&quot;&gt;&lt;/i&gt; 我的行程&lt;/span&gt;&#10;    我的行程&#10;  &lt;/el-tab-pane&gt;&#10;  &lt;el-tab-pane label=&quot;消息中心&quot;&gt;消息中心&lt;/el-tab-pane&gt;&#10;  &lt;el-tab-pane label=&quot;角色管理&quot;&gt;角色管理&lt;/el-tab-pane&gt;&#10;  &lt;el-tab-pane label=&quot;定时任务补偿&quot;&gt;定时任务补偿&lt;/el-tab-pane&gt;&#10;&lt;/el-tabs&gt;" description="标签页-自定义标签" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-tabs-dynamic" value="&lt;el-tabs v-model=&quot;editableTabsValue&quot; type=&quot;card&quot; editable @edit=&quot;handleTabsEdit&quot;&gt;&#10;  &lt;el-tab-pane&#10;    v-for=&quot;(item, index) in editableTabs&quot;&#10;    :label=&quot;item.title&quot;&#10;    :name=&quot;item.name&quot;&#10;  &gt;&#10;    {{item.content}}&#10;  &lt;/el-tab-pane&gt;&#10;&lt;/el-tabs&gt;&#10;&lt;script&gt;&#10;  export default {&#10;    data() {&#10;      return {&#10;        editableTabsValue: '2',&#10;        editableTabs: [{&#10;          title: 'Tab 1',&#10;          name: '1',&#10;          content: 'Tab 1 content'&#10;        }, {&#10;          title: 'Tab 2',&#10;          name: '2',&#10;          content: 'Tab 2 content'&#10;        }],&#10;        tabIndex: 2&#10;      }&#10;    },&#10;    methods: {&#10;      handleTabsEdit(targetName, action) {&#10;        if (action === 'add') {&#10;          let newTabName = ++this.tabIndex + '';&#10;          this.editableTabs.push({&#10;            title: 'New Tab',&#10;            name: newTabName,&#10;            content: 'New Tab content'&#10;          });&#10;          this.editableTabsValue = newTabName;&#10;        }&#10;        if (action === 'remove') {&#10;          let tabs = this.editableTabs;&#10;          let activeName = this.editableTabsValue;&#10;          if (activeName === targetName) {&#10;            tabs.forEach((tab, index) =&gt; {&#10;              if (tab.name === targetName) {&#10;                let nextTab = tabs[index + 1] || tabs[index - 1];&#10;                if (nextTab) {&#10;                  activeName = nextTab.name;&#10;                }&#10;              }&#10;            });&#10;          }&#10;          &#10;          this.editableTabsValue = activeName;&#10;          this.editableTabs = tabs.filter(tab =&gt; tab.name !== targetName);&#10;        }&#10;      }&#10;    }&#10;  }&#10;&lt;/script&gt;" description="标签页-可动态增添选项卡" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-tabs-dynamic-custom" value="&lt;div style=&quot;margin-bottom: 20px;&quot;&gt;&#10;  &lt;el-button&#10;    size=&quot;small&quot;&#10;    @click=&quot;addTab(editableTabsValue2)&quot;&#10;  &gt;&#10;    add tab&#10;  &lt;/el-button&gt;&#10;&lt;/div&gt;&#10;&lt;el-tabs v-model=&quot;editableTabsValue2&quot; type=&quot;card&quot; closable @tab-remove=&quot;removeTab&quot;&gt;&#10;  &lt;el-tab-pane&#10;    v-for=&quot;(item, index) in editableTabs2&quot;&#10;    :label=&quot;item.title&quot;&#10;    :name=&quot;item.name&quot;&#10;  &gt;&#10;    {{item.content}}&#10;  &lt;/el-tab-pane&gt;&#10;&lt;/el-tabs&gt;&#10;&lt;script&gt;&#10;  export default {&#10;    data() {&#10;      return {&#10;        editableTabsValue2: '2',&#10;        editableTabs2: [{&#10;          title: 'Tab 1',&#10;          name: '1',&#10;          content: 'Tab 1 content'&#10;        }, {&#10;          title: 'Tab 2',&#10;          name: '2',&#10;          content: 'Tab 2 content'&#10;        }],&#10;        tabIndex: 2&#10;      }&#10;    },&#10;    methods: {&#10;      addTab(targetName) {&#10;        let newTabName = ++this.tabIndex + '';&#10;        this.editableTabs2.push({&#10;          title: 'New Tab',&#10;          name: newTabName,&#10;          content: 'New Tab content'&#10;        });&#10;        this.editableTabsValue2 = newTabName;&#10;      },&#10;      removeTab(targetName) {&#10;        let tabs = this.editableTabs2;&#10;        let activeName = this.editableTabsValue2;&#10;        if (activeName === targetName) {&#10;          tabs.forEach((tab, index) =&gt; {&#10;            if (tab.name === targetName) {&#10;              let nextTab = tabs[index + 1] || tabs[index - 1];&#10;              if (nextTab) {&#10;                activeName = nextTab.name;&#10;              }&#10;            }&#10;          });&#10;        }&#10;        &#10;        this.editableTabsValue2 = activeName;&#10;        this.editableTabs2 = tabs.filter(tab =&gt; tab.name !== targetName);&#10;      }&#10;    }&#10;  }&#10;&lt;/script&gt;" description="标签页-可动态增添选项卡,自定义触发点" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-breadcrumb" value="&lt;el-breadcrumb separator=&quot;/&quot;&gt;&#10;  &lt;el-breadcrumb-item :to=&quot;{ path: '/' }&quot; relace=&quot;$是否不用history记录$&quot;&gt;首页&lt;/el-breadcrumb-item&gt;&#10;  &lt;el-breadcrumb-item&gt;活动管理&lt;/el-breadcrumb-item&gt;&#10;  &lt;el-breadcrumb-item&gt;活动列表&lt;/el-breadcrumb-item&gt;&#10;  &lt;el-breadcrumb-item&gt;活动详情&lt;/el-breadcrumb-item&gt;&#10;&lt;/el-breadcrumb&gt;" description="面包屑" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-dropdown" value="&lt;el-dropdown :hide-on-click=&quot;$是否隐藏$&quot;&gt;&#10;  &lt;span class=&quot;el-dropdown-link&quot;&gt;&#10;    下拉菜单&lt;i class=&quot;el-icon-caret-bottom el-icon--right&quot;&gt;&lt;/i&gt;&#10;  &lt;/span&gt;&#10;  &lt;el-dropdown-menu slot=&quot;dropdown&quot;&gt;&#10;    &lt;el-dropdown-item&gt;黄金糕&lt;/el-dropdown-item&gt;&#10;    &lt;el-dropdown-item command=&quot;$指令$&quot;&gt;狮子头&lt;/el-dropdown-item&gt;&#10;    &lt;el-dropdown-item&gt;螺蛳粉&lt;/el-dropdown-item&gt;&#10;    &lt;el-dropdown-item disabled&gt;双皮奶&lt;/el-dropdown-item&gt;&#10;    &lt;el-dropdown-item divided&gt;蚵仔煎&lt;/el-dropdown-item&gt;&#10;  &lt;/el-dropdown-menu&gt;&#10;&lt;/el-dropdown&gt;" description="下来菜单" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-dropdown-trigger" value="&lt;el-dropdown&gt;&#10;  &lt;el-button type=&quot;primary&quot;&gt;&#10;    更多菜单&lt;i class=&quot;el-icon-caret-bottom el-icon--right&quot;&gt;&lt;/i&gt;&#10;  &lt;/el-button&gt;&#10;  &lt;el-dropdown-menu slot=&quot;dropdown&quot;&gt;&#10;    &lt;el-dropdown-item&gt;黄金糕&lt;/el-dropdown-item&gt;&#10;    &lt;el-dropdown-item&gt;狮子头&lt;/el-dropdown-item&gt;&#10;    &lt;el-dropdown-item&gt;螺蛳粉&lt;/el-dropdown-item&gt;&#10;    &lt;el-dropdown-item&gt;双皮奶&lt;/el-dropdown-item&gt;&#10;    &lt;el-dropdown-item&gt;蚵仔煎&lt;/el-dropdown-item&gt;&#10;  &lt;/el-dropdown-menu&gt;&#10;&lt;/el-dropdown&gt;" description="下拉菜单-触发" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-dropdown-split" value="&lt;el-dropdown split-button type=&quot;primary&quot; @click=&quot;handleClick&quot;&gt;&#10;  更多菜单&#10;  &lt;el-dropdown-menu slot=&quot;dropdown&quot;&gt;&#10;    &lt;el-dropdown-item&gt;黄金糕&lt;/el-dropdown-item&gt;&#10;    &lt;el-dropdown-item&gt;狮子头&lt;/el-dropdown-item&gt;&#10;    &lt;el-dropdown-item&gt;螺蛳粉&lt;/el-dropdown-item&gt;&#10;    &lt;el-dropdown-item&gt;双皮奶&lt;/el-dropdown-item&gt;&#10;    &lt;el-dropdown-item&gt;蚵仔煎&lt;/el-dropdown-item&gt;&#10;  &lt;/el-dropdown-menu&gt;&#10;&lt;/el-dropdown&gt;" description="下拉菜单-左边是功能键，右边是下拉菜单" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-dropdown-hover" value="&lt;el-dropdown&gt;&#10;      &lt;span class=&quot;el-dropdown-link&quot;&gt;&#10;        下拉菜单&lt;i class=&quot;el-icon-caret-bottom el-icon--right&quot;&gt;&lt;/i&gt;&#10;      &lt;/span&gt;&#10;      &lt;el-dropdown-menu slot=&quot;dropdown&quot;&gt;&#10;        &lt;el-dropdown-item&gt;黄金糕&lt;/el-dropdown-item&gt;&#10;        &lt;el-dropdown-item&gt;狮子头&lt;/el-dropdown-item&gt;&#10;        &lt;el-dropdown-item&gt;螺蛳粉&lt;/el-dropdown-item&gt;&#10;        &lt;el-dropdown-item&gt;双皮奶&lt;/el-dropdown-item&gt;&#10;        &lt;el-dropdown-item&gt;蚵仔煎&lt;/el-dropdown-item&gt;&#10;      &lt;/el-dropdown-menu&gt;&#10;    &lt;/el-dropdown&gt;" description="下拉菜单-触发hover" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-dropdown-click" value="&lt;el-dropdown trigger=&quot;click&quot;&gt;&#10;      &lt;span class=&quot;el-dropdown-link&quot;&gt;&#10;        下拉菜单&lt;i class=&quot;el-icon-caret-bottom el-icon--right&quot;&gt;&lt;/i&gt;&#10;      &lt;/span&gt;&#10;      &lt;el-dropdown-menu slot=&quot;dropdown&quot;&gt;&#10;        &lt;el-dropdown-item&gt;黄金糕&lt;/el-dropdown-item&gt;&#10;        &lt;el-dropdown-item&gt;狮子头&lt;/el-dropdown-item&gt;&#10;        &lt;el-dropdown-item&gt;螺蛳粉&lt;/el-dropdown-item&gt;&#10;        &lt;el-dropdown-item&gt;双皮奶&lt;/el-dropdown-item&gt;&#10;        &lt;el-dropdown-item&gt;蚵仔煎&lt;/el-dropdown-item&gt;&#10;      &lt;/el-dropdown-menu&gt;&#10;    &lt;/el-dropdown&gt;" description="下拉菜单-触发click" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-step" value="&lt;el-steps :space=&quot;100&quot; :active=&quot;active&quot; finish-status=&quot;success&quot;&gt;&#10;  &lt;el-step title=&quot;步骤 1&quot;&gt;&lt;/el-step&gt;&#10;  &lt;el-step title=&quot;步骤 2&quot;&gt;&lt;/el-step&gt;&#10;  &lt;el-step title=&quot;步骤 3&quot; description=&quot;$描述$&quot;&gt;&lt;/el-step&gt;&#10;&lt;/el-steps&gt;" description="步骤条" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-step-icon" value="&lt;el-steps :space=&quot;100&quot; :active=&quot;1&quot;&gt;&#10;  &lt;el-step title=&quot;步骤 1&quot; icon=&quot;edit&quot;&gt;&lt;/el-step&gt;&#10;  &lt;el-step title=&quot;步骤 2&quot; icon=&quot;upload&quot;&gt;&lt;/el-step&gt;&#10;  &lt;el-step title=&quot;步骤 3&quot; icon=&quot;picture&quot;&gt;&lt;/el-step&gt;&#10;&lt;/el-steps&gt;" description="步骤条-带图标" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-step-vertical" value="&lt;el-steps :space=&quot;100&quot; direction=&quot;vertical&quot; :active=&quot;1&quot;&gt;&#10;  &lt;el-step title=&quot;步骤 1&quot;&gt;&lt;/el-step&gt;&#10;  &lt;el-step title=&quot;步骤 2&quot;&gt;&lt;/el-step&gt;&#10;  &lt;el-step title=&quot;步骤 3&quot;&gt;&lt;/el-step&gt;&#10;&lt;/el-steps&gt;" description="步骤条-竖着的" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-dialog" value="&lt;el-dialog title=&quot;提示&quot; v-model=&quot;dialogVisible&quot; size=&quot;tiny&quot;&gt;&#10;  &lt;span&gt;这是一段信息&lt;/span&gt;&#10;  &lt;span slot=&quot;footer&quot; class=&quot;dialog-footer&quot;&gt;&#10;    &lt;el-button @click=&quot;dialogVisible = false&quot;&gt;取 消&lt;/el-button&gt;&#10;    &lt;el-button type=&quot;primary&quot; @click=&quot;dialogVisible = false&quot;&gt;确 定&lt;/el-button&gt;&#10;  &lt;/span&gt;&#10;&lt;/el-dialog&gt;" description="对话框" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-card" value="&lt;el-card class=&quot;box-card&quot;&gt;&#10;  &lt;div slot=&quot;header&quot; class=&quot;clearfix&quot;&gt;&#10;    &lt;span style=&quot;line-height: 36px;&quot;&gt;卡片名称&lt;/span&gt;&#10;    &lt;el-button style=&quot;float: right;&quot; type=&quot;primary&quot;&gt;操作按钮&lt;/el-button&gt;&#10;  &lt;/div&gt;&#10;  &lt;div v-for=&quot;o in 4&quot; class=&quot;text item&quot;&gt;&#10;    {{'列表内容 ' + o }}&#10;  &lt;/div&gt;&#10;&lt;/el-card&gt;&#10;" description="卡片" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-card-simple" value="&lt;el-card class=&quot;box-card&quot;&gt;&#10;  &lt;div v-for=&quot;o in 4&quot; class=&quot;text item&quot;&gt;&#10;    {{'列表内容 ' + o }}&#10;  &lt;/div&gt;&#10;&lt;/el-card&gt;" description="卡片 只有内容区域" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-card-img" value="&lt;el-card :body-style=&quot;{ padding: '0px' }&quot;&gt;&#10;      &lt;img src=&quot;~examples/assets/images/hamburger.png&quot; class=&quot;image&quot;&gt;&#10;      &lt;div style=&quot;padding: 14px;&quot;&gt;&#10;        &lt;span&gt;好吃的汉堡&lt;/span&gt;&#10;        &lt;div class=&quot;bottom clearfix&quot;&gt;&#10;          &lt;time class=&quot;time&quot;&gt;{{ currentDate }}&lt;/time&gt;&#10;          &lt;el-button type=&quot;text&quot; class=&quot;button&quot;&gt;操作按钮&lt;/el-button&gt;&#10;        &lt;/div&gt;&#10;      &lt;/div&gt;&#10;    &lt;/el-card&gt;" description="卡片 带图片" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-carousel-hover" value="&lt;el-carousel height=&quot;150px&quot;&gt;&#10;      &lt;el-carousel-item v-for=&quot;item in 4&quot;&gt;&#10;        &lt;h3&gt;{{ item }}&lt;/h3&gt;&#10;      &lt;/el-carousel-item&gt;&#10;    &lt;/el-carousel&gt;" description="轮播图" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-carousel-click" value="    &lt;el-carousel trigger=&quot;click&quot; height=&quot;150px&quot;&gt;&#10;      &lt;el-carousel-item v-for=&quot;item in 4&quot;&gt;&#10;        &lt;h3&gt;{{ item }}&lt;/h3&gt;&#10;      &lt;/el-carousel-item&gt;&#10;    &lt;/el-carousel&gt;" description="轮播图 点击触发" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-carousel-indicator" value="&lt;el-carousel indicator-position=&quot;outside&quot;&gt;&#10;    &lt;el-carousel-item v-for=&quot;item in 4&quot;&gt;&#10;      &lt;h3&gt;{{ item }}&lt;/h3&gt;&#10;    &lt;/el-carousel-item&gt;&#10;  &lt;/el-carousel&gt;" description="轮播图 带指示器" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-carousel-arrow" value="  &lt;el-carousel :interval=&quot;5000&quot; arrow=&quot;always&quot;&gt;&#10;    &lt;el-carousel-item v-for=&quot;item in 4&quot;&gt;&#10;      &lt;h3&gt;{{ item }}&lt;/h3&gt;&#10;    &lt;/el-carousel-item&gt;&#10;  &lt;/el-carousel&gt;" description="轮播图 切换箭头时机" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-carousel-card" value="  &lt;el-carousel :interval=&quot;4000&quot; type=&quot;card&quot; height=&quot;200px&quot;&gt;&#10;    &lt;el-carousel-item v-for=&quot;item in 6&quot;&gt;&#10;      &lt;h3&gt;{{ item }}&lt;/h3&gt;&#10;    &lt;/el-carousel-item&gt;&#10;  &lt;/el-carousel&gt;" description="轮播图 卡片化" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-collapse" value="&lt;el-collapse v-model=&quot;activeNames&quot; @change=&quot;handleChange&quot;&gt;&#10;  &lt;el-collapse-item title=&quot;一致性 Consistency&quot; name=&quot;1&quot;&gt;&#10;    &lt;div&gt;与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；&lt;/div&gt;&#10;    &lt;div&gt;在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。&lt;/div&gt;&#10;  &lt;/el-collapse-item&gt;&#10;  &lt;el-collapse-item title=&quot;反馈 Feedback&quot; name=&quot;2&quot;&gt;&#10;    &lt;div&gt;控制反馈：通过界面样式和交互动效让用户可以清晰的感知自己的操作；&lt;/div&gt;&#10;    &lt;div&gt;页面反馈：操作后，通过页面元素的变化清晰地展现当前状态。&lt;/div&gt;&#10;  &lt;/el-collapse-item&gt;&#10;  &lt;el-collapse-item title=&quot;效率 Efficiency&quot; name=&quot;3&quot;&gt;&#10;    &lt;div&gt;简化流程：设计简洁直观的操作流程；&lt;/div&gt;&#10;    &lt;div&gt;清晰明确：语言表达清晰且表意明确，让用户快速理解进而作出决策；&lt;/div&gt;&#10;    &lt;div&gt;帮助用户识别：界面简单直白，让用户快速识别而非回忆，减少用户记忆负担。&lt;/div&gt;&#10;  &lt;/el-collapse-item&gt;&#10;  &lt;el-collapse-item title=&quot;可控 Controllability&quot; name=&quot;4&quot;&gt;&#10;    &lt;div&gt;用户决策：根据场景可给予用户操作建议或安全提示，但不能代替用户进行决策；&lt;/div&gt;&#10;    &lt;div&gt;结果可控：用户可以自由的进行操作，包括撤销、回退和终止当前操作等。&lt;/div&gt;&#10;  &lt;/el-collapse-item&gt;&#10;&lt;/el-collapse&gt;" description="折叠面板" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-collapse-accordion" value="&lt;el-collapse v-model=&quot;activeName&quot; accordion&gt;&#10;  &lt;el-collapse-item title=&quot;一致性 Consistency&quot; name=&quot;1&quot;&gt;&#10;    &lt;div&gt;与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；&lt;/div&gt;&#10;    &lt;div&gt;在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。&lt;/div&gt;&#10;  &lt;/el-collapse-item&gt;&#10;  &lt;el-collapse-item title=&quot;反馈 Feedback&quot; name=&quot;2&quot;&gt;&#10;    &lt;div&gt;控制反馈：通过界面样式和交互动效让用户可以清晰的感知自己的操作；&lt;/div&gt;&#10;    &lt;div&gt;页面反馈：操作后，通过页面元素的变化清晰地展现当前状态。&lt;/div&gt;&#10;  &lt;/el-collapse-item&gt;&#10;  &lt;el-collapse-item title=&quot;效率 Efficiency&quot; name=&quot;3&quot;&gt;&#10;    &lt;div&gt;简化流程：设计简洁直观的操作流程；&lt;/div&gt;&#10;    &lt;div&gt;清晰明确：语言表达清晰且表意明确，让用户快速理解进而作出决策；&lt;/div&gt;&#10;    &lt;div&gt;帮助用户识别：界面简单直白，让用户快速识别而非回忆，减少用户记忆负担。&lt;/div&gt;&#10;  &lt;/el-collapse-item&gt;&#10;  &lt;el-collapse-item title=&quot;可控 Controllability&quot; name=&quot;4&quot;&gt;&#10;    &lt;div&gt;用户决策：根据场景可给予用户操作建议或安全提示，但不能代替用户进行决策；&lt;/div&gt;&#10;    &lt;div&gt;结果可控：用户可以自由的进行操作，包括撤销、回退和终止当前操作等。&lt;/div&gt;&#10;  &lt;/el-collapse-item&gt;&#10;&lt;/el-collapse&gt;" description="折叠面板 手风琴样式" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-collapse-custom" value="&lt;el-collapse accordion&gt;&#10;  &lt;el-collapse-item&gt;&#10;    &lt;template slot=&quot;title&quot;&gt;&#10;      一致性 Consistency&lt;i class=&quot;header-icon el-icon-information&quot;&gt;&lt;/i&gt;&#10;    &lt;/template&gt;&#10;    &lt;div&gt;与现实生活一致：与现实生活的流程、逻辑保持一致，遵循用户习惯的语言和概念；&lt;/div&gt;&#10;    &lt;div&gt;在界面中一致：所有的元素和结构需保持一致，比如：设计样式、图标和文本、元素的位置等。&lt;/div&gt;&#10;  &lt;/el-collapse-item&gt;&#10;  &lt;el-collapse-item title=&quot;反馈 Feedback&quot;&gt;&#10;    &lt;div&gt;控制反馈：通过界面样式和交互动效让用户可以清晰的感知自己的操作；&lt;/div&gt;&#10;    &lt;div&gt;页面反馈：操作后，通过页面元素的变化清晰地展现当前状态。&lt;/div&gt;&#10;  &lt;/el-collapse-item&gt;&#10;  &lt;el-collapse-item title=&quot;效率 Efficiency&quot;&gt;&#10;    &lt;div&gt;简化流程：设计简洁直观的操作流程；&lt;/div&gt;&#10;    &lt;div&gt;清晰明确：语言表达清晰且表意明确，让用户快速理解进而作出决策；&lt;/div&gt;&#10;    &lt;div&gt;帮助用户识别：界面简单直白，让用户快速识别而非回忆，减少用户记忆负担。&lt;/div&gt;&#10;  &lt;/el-collapse-item&gt;&#10;  &lt;el-collapse-item title=&quot;可控 Controllability&quot;&gt;&#10;    &lt;div&gt;用户决策：根据场景可给予用户操作建议或安全提示，但不能代替用户进行决策；&lt;/div&gt;&#10;    &lt;div&gt;结果可控：用户可以自由的进行操作，包括撤销、回退和终止当前操作等。&lt;/div&gt;&#10;  &lt;/el-collapse-item&gt;&#10;&lt;/el-collapse&gt;" description="折叠面板 自定义面板标题" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-upload" value="&lt;el-upload&#10;  class=&quot;upload-demo&quot;&#10;  action=&quot;//jsonplaceholder.typicode.com/posts/&quot;&#10;  :on-preview=&quot;handlePreview&quot;&#10;  :on-remove=&quot;handleRemove&quot;&#10;  :file-list=&quot;fileList&quot;&#10;  :on-change=&quot;handleChange$对列表进行控制$&quot;&#10;  &gt;&#10;  &lt;el-button size=&quot;small&quot; type=&quot;primary&quot;&gt;点击上传&lt;/el-button&gt;&#10;  &lt;div slot=&quot;tip&quot; class=&quot;el-upload__tip&quot;&gt;只能上传jpg/png文件，且不超过500kb&lt;/div&gt;&#10;&lt;/el-upload&gt;&#10;&#10; handleRemove(file, fileList) {&#10;        console.log(file, fileList);&#10;      },&#10;      handlePreview(file) {&#10;        console.log(file);&#10;      }" description="上传组件" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-upload-img" value="&lt;el-upload&#10;  class=&quot;avatar-uploader&quot;&#10;  action=&quot;//jsonplaceholder.typicode.com/posts/&quot;&#10;  :show-file-list=&quot;false&quot;&#10;  :on-success=&quot;handleAvatarScucess&quot;&#10;  :before-upload=&quot;beforeAvatarUpload&quot;&gt;&#10;  &lt;img v-if=&quot;imageUrl&quot; :src=&quot;imageUrl&quot; class=&quot;avatar&quot;&gt;&#10;  &lt;i v-else class=&quot;el-icon-plus avatar-uploader-icon&quot;&gt;&lt;/i&gt;&#10;&lt;/el-upload&gt;&#10;&#10; handleAvatarScucess(res, file) {&#10;        this.imageUrl = URL.createObjectURL(file.raw);&#10;      },&#10;      beforeAvatarUpload(file) {&#10;        const isJPG = file.type === 'image/jpeg';&#10;        const isLt2M = file.size / 1024 / 1024 &lt; 2;&#10;&#10;        if (!isJPG) {&#10;          this.$message.error('上传头像图片只能是 JPG 格式!');&#10;        }&#10;        if (!isLt2M) {&#10;          this.$message.error('上传头像图片大小不能超过 2MB!');&#10;        }&#10;        return isJPG &amp;&amp; isLt2M;&#10;      }&#10;    }" description="上传组件 图片" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-upload-imglist" value="&#10;在线运行&#10;&lt;el-upload&#10;  action=&quot;//jsonplaceholder.typicode.com/posts/&quot;&#10;  list-type=&quot;picture-card&quot;&#10;  :on-preview=&quot;handlePictureCardPreview&quot;&#10;  :on-remove=&quot;handleRemove&quot;&gt;&#10;  &lt;i class=&quot;el-icon-plus&quot;&gt;&lt;/i&gt;&#10;&lt;/el-upload&gt;&#10;&lt;el-dialog v-model=&quot;dialogVisible&quot; size=&quot;tiny&quot;&gt;&#10;  &lt;img width=&quot;100%&quot; :src=&quot;dialogImageUrl&quot; alt=&quot;&quot;&gt;&#10;&lt;/el-dialog&gt;&#10;&lt;script&gt;&#10;  export default {&#10;    data() {&#10;      return {&#10;        dialogImageUrl: '',&#10;        dialogVisible: false&#10;      };&#10;    },&#10;    methods: {&#10;      handleRemove(file, fileList) {&#10;        console.log(file, fileList);&#10;      },&#10;      handlePictureCardPreview(file) {&#10;        this.dialogImageUrl = file.url;&#10;        this.dialogVisible = true;&#10;      }&#10;    }&#10;  }&#10;&lt;/script&gt;" description="上传组件 照片墙" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-upload-img-thumbnail" value="&lt;el-upload&#10;  class=&quot;upload-demo&quot;&#10;  action=&quot;//jsonplaceholder.typicode.com/posts/&quot;&#10;  :on-preview=&quot;handlePreview&quot;&#10;  :on-remove=&quot;handleRemove&quot;&#10;  :file-list=&quot;fileList2&quot;&#10;  list-type=&quot;picture&quot;&gt;&#10;  &lt;el-button size=&quot;small&quot; type=&quot;primary&quot;&gt;点击上传&lt;/el-button&gt;&#10;  &lt;div slot=&quot;tip&quot; class=&quot;el-upload__tip&quot;&gt;只能上传jpg/png文件，且不超过500kb&lt;/div&gt;&#10;&lt;/el-upload&gt;&#10;&lt;script&gt;&#10;  export default {&#10;    data() {&#10;      return {&#10;        fileList2: [{name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}, {name: 'food2.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}]&#10;      };&#10;    },&#10;    methods: {&#10;      handleRemove(file, fileList) {&#10;        console.log(file, fileList);&#10;      },&#10;      handlePreview(file) {&#10;        console.log(file);&#10;      }&#10;    }&#10;  }&#10;&lt;/script&gt;" description="上传组件 照片带缩略图" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-upload-drag" value="&lt;el-upload&#10;  class=&quot;upload-demo&quot;&#10;  drag&#10;  action=&quot;//jsonplaceholder.typicode.com/posts/&quot;&#10;  mutiple&gt;&#10;  &lt;i class=&quot;el-icon-upload&quot;&gt;&lt;/i&gt;&#10;  &lt;div class=&quot;el-upload__text&quot;&gt;将文件拖到此处，或&lt;em&gt;点击上传&lt;/em&gt;&lt;/div&gt;&#10;  &lt;div class=&quot;el-upload__tip&quot; slot=&quot;tip&quot;&gt;只能上传jpg/png文件，且不超过500kb&lt;/div&gt;&#10;&lt;/el-upload&gt;" description="上传组件 拖动" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-upload-manual" value="&lt;el-upload&#10;  class=&quot;upload-demo&quot;&#10;  ref=&quot;upload&quot;&#10;  action=&quot;//jsonplaceholder.typicode.com/posts/&quot;&#10;  :on-preview=&quot;handlePreview&quot;&#10;  :on-remove=&quot;handleRemove&quot;&#10;  :file-list=&quot;fileList&quot;&#10;  :auto-upload=&quot;false&quot;&gt;&#10;  &lt;el-button slot=&quot;trigger&quot; size=&quot;small&quot; type=&quot;primary&quot;&gt;选取文件&lt;/el-button&gt;&#10;  &lt;el-button style=&quot;margin-left: 10px;&quot; size=&quot;small&quot; type=&quot;success&quot; @click=&quot;submitUpload&quot;&gt;上传到服务器&lt;/el-button&gt;&#10;  &lt;div slot=&quot;tip&quot; class=&quot;el-upload__tip&quot;&gt;只能上传jpg/png文件，且不超过500kb&lt;/div&gt;&#10;&lt;/el-upload&gt;&#10;&lt;script&gt;&#10;  export default {&#10;    data() {&#10;      return {&#10;        fileList: [{name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}, {name: 'food2.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}]&#10;      };&#10;    },&#10;    methods: {&#10;      handleRemove(file, fileList) {&#10;        console.log(file, fileList);&#10;      },&#10;      handlePreview(file) {&#10;        console.log(file);&#10;      }&#10;    }&#10;  }&#10;&lt;/script&gt;" description="上传组件 手动上传" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+  <template name="elm-row" value="&lt;el-row&gt;&#10;  &lt;el-col :span=&quot;12&quot;&gt;&lt;div class=&quot;grid-content bg-purple&quot;&gt;&lt;/div&gt;&lt;/el-col&gt;&#10;  &lt;el-col :span=&quot;12&quot;&gt;&lt;div class=&quot;grid-content bg-purple-light&quot;&gt;&lt;/div&gt;&lt;/el-col&gt;&#10;&lt;/el-row&gt;" description="布局" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="OTHER" value="true" />
+    </context>
+  </template>
+</templateSet>
